@@ -1,0 +1,1 @@
+.\smtsolvers\mathsat-5.2.4-win32-msvc\bin\mathsat.exe -input=smt2 < input.smt2 > outMathSat.txt

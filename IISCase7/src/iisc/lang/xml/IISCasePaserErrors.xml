@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<IISCaseMsg>
+<UNKNOWN_DOMAIN>
+	<text>Line:%s1:%s2. %s3. Domain %s4 is not recognized.</text>
+</UNKNOWN_DOMAIN>
+<MISMATCHED_CHAR>
+	<text>Line:%s1:%s2. Mismatched character '%s3', expected '%s4'.</text>
+</MISMATCHED_CHAR>
+<UNEXPECED_CHAR>
+	<text>Line:%s1:%s2. Unexpected character '%s3'.</text>
+</UNEXPECED_CHAR>
+<MISMATCHED_CHAR_RANGE>
+	<text>Line:%s1:%s2. Mismatched character '%s3', expected '%s4'..'%s5'.</text>
+</MISMATCHED_CHAR_RANGE>
+<UNEXPECED_TOKEN>
+	<text>Line:%s1:%s2. Unexpected '%s3'.</text>
+</UNEXPECED_TOKEN>
+<UNEXPECED_EOF>
+	<text>Line:%s1:%s2. %s3. Unexpected end of file.</text>
+</UNEXPECED_EOF>
+<UNEXPECED_EOF_EXPECTED>
+	<text>Line:%s1:%s2. %s3. Unexpected end of file. Expeced '%s4'.</text>
+</UNEXPECED_EOF_EXPECTED>
+<UNEXPECED_TOKEN_CONTEXT>
+	<text>Line:%s1:%s2. %s3. Unexpected '%s4'.</text>
+</UNEXPECED_TOKEN_CONTEXT>
+<EOF_EXPECED>
+	<text>Line:%s1:%s2. %s3. End of file expeced.</text>
+</EOF_EXPECED>
+<EXPECTED_TOKEN_CONTEXT>
+	<text>Line:%s1:%s2. %s3. Expected '%s4'.</text>
+</EXPECTED_TOKEN_CONTEXT>
+<EXPECTED_TOKEN_FOUND>
+	<text>Line:%s1:%s2. %s3. Expected '%s4', but '%s5' found.</text>
+</EXPECTED_TOKEN_FOUND>
+<CAN_NOT_ASS_CONST_TO_VAR>
+	<text>Line:%s1:%s2. %s3. Data type mismatch. Constant '%s4' can not be assigned to the '%s5' variable.</text>
+</CAN_NOT_ASS_CONST_TO_VAR>
+<CAN_NOT_ASS_CONST_TO_VALUE>
+	<text>Line:%s1:%s2. %s3. Data type mismatch. Constant '%s4' can not be assigned to the '%s5' value.</text>
+</CAN_NOT_ASS_CONST_TO_VALUE>
+<CAN_NOT_ASS_CONST_TO_VALUE_INIT>
+	<text>Line:%s1:%s2. %s3. Data type mismatch at pos %s4. Constant '%s5' can not be assigned to the '%s6' value.</text>
+</CAN_NOT_ASS_CONST_TO_VALUE_INIT>
+<CAN_NOT_INIT_NOT_ARRAY>
+	<text>Line:%s1:%s2. %s3. Data type mismatch. '%s4' value can not be initialized in this way.</text>
+</CAN_NOT_INIT_NOT_ARRAY>
+<TO_MANY_VALUES>
+	<text>Line:%s1:%s2. %s3. Error while initializing at pos %s4. To many values. Expected %s5 at most.</text>
+</TO_MANY_VALUES>
+<INVALID_SUBRANGE>
+	<text>Line:%s1:%s2. %s3. Invalid subrange. Lower boundary must be less or equal than upper boundary.</text>
+</INVALID_SUBRANGE>
+<DUPLICATE_ARGUMENT_NAME>
+	<text>Line:%s1:%s2. %s3. Argument named %s4 has already been defined.</text>
+</DUPLICATE_ARGUMENT_NAME>
+<DUPLICATE_VAR_NAME>
+	<text>Line:%s1:%s2. %s3. Variable named %s4 has already been defined.</text>
+</DUPLICATE_VAR_NAME>
+<UNKNOWN_VARIABLE_NAME>
+	<text>Line:%s1:%s2. %s3. Unknown variable %s4.</text>
+</UNKNOWN_VARIABLE_NAME>
+<CAN_NOT_APPPLY_DOT_OPERATOR>
+	<text>Line:%s1:%s2. %s3. Operator '.' can not be applied to the domain %s4.</text>
+</CAN_NOT_APPPLY_DOT_OPERATOR>
+<DOMAIN_DOES_NOT_CONTAIN>
+	<text>Line:%s1:%s2. %s3. Domain %s4 does not contain member named %s5.</text>
+</DOMAIN_DOES_NOT_CONTAIN>
+<CAN_NOT_APPPLY_INDEX_OPERATOR>
+	<text>Line:%s1:%s2. %s3. Operator [] can not be applied to the domain %s4. It can only be apply to arrray variable.</text>
+</CAN_NOT_APPPLY_INDEX_OPERATOR>
+<TO_MANY_SUBSCRIPTS>
+	<text>Line:%s1:%s2. %s3. To many subscipts.</text>
+</TO_MANY_SUBSCRIPTS>
+<CAN_NOT_ASS_CONST_EXPRESSION_TO_VAR>
+	<text>Line:%s1:%s2. %s3. Data type mismatch. '%s4' value can not be assigned to the '%s5' variable.</text>
+</CAN_NOT_ASS_CONST_EXPRESSION_TO_VAR>
+<ARRRAY_NOT_COMPATIBILE>
+	<text>Line:%s1:%s2. %s3. Data type mismatch. Arrays are not compatibile.</text>
+</ARRRAY_NOT_COMPATIBILE>
+<CAN_NOT_APPLY_OPERATOR>
+	<text>Line:%s1:%s2. %s3. Operator '%s4' can not be applied over '%s5' and '%s6'.</text>
+</CAN_NOT_APPLY_OPERATOR>
+<CAN_NOT_APPLY_UNARY_OPERATOR>
+	<text>Line:%s1:%s2. %s3. Operator '%s4' can not be applied over '%s5'.</text>
+</CAN_NOT_APPLY_UNARY_OPERATOR>
+<ERROR_IN_OPERATOR>
+	<text>Line:%s1:%s2. %s3. In operator. Data type mismatch. Expeced %s4, but found %s5.</text>
+</ERROR_IN_OPERATOR>
+<UNKNOWN_FUNC>
+	<text>Line:%s1:%s2. %s3. Unknown function '%s4'.</text>
+</UNKNOWN_FUNC>
+<FUNC_PARAM_DT_MISMATCH>
+	<text>Line:%s1:%s2. %s3. Parameter in position %s4. Data type mismatch. Expeced %s5, but found %s6.</text>
+</FUNC_PARAM_DT_MISMATCH>
+<FUNC_BAD_PARAM_NUM>
+	<text>Line:%s1:%s2. %s3. Function %s4 takes %s5 params, but found %s6.</text>
+</FUNC_BAD_PARAM_NUM>
+<FUNC_BAD_PARAM_OUT_TYPE>
+	<text>Line:%s1:%s2. %s3. Parameter in position %s4 is declared as output. Variable name is expected instead of constant or expression.</text>
+</FUNC_BAD_PARAM_OUT_TYPE>
+<INVALID_IF_COND>
+	<text>Line:%s1:%s2. %s3. Invalid if condition. Boolean value expected but found %s4.</text>
+</INVALID_IF_COND>
+<INVALID_WHILE_COND>
+	<text>Line:%s1:%s2. %s3. Invalid while condition. Boolean value expected but found %s4.</text>
+</INVALID_WHILE_COND>
+<INVALID_REPEAT_COND>
+	<text>Line:%s1:%s2. %s3. Invalid repeat condition. Boolean value expected but found %s4.</text>
+</INVALID_REPEAT_COND>
+<ERROR_CASE_DATA_TYPE>
+	<text>Line:%s1:%s2. %s3. Data type mismatch in case expression. Expeced %s4, but found %s5.</text>
+</ERROR_CASE_DATA_TYPE>
+<INVALID_FOR_BOUNDARY>
+	<text>Line:%s1:%s2. %s3. Invalid for boundry. Expeced integer, but found %s4.</text>
+</INVALID_FOR_BOUNDARY>
+<INVALID_FOR_VAR>
+	<text>Line:%s1:%s2. %s3. Invalid for variable. Variable '%s4' can not be user as counter. Expected integer variable, but found %s5.</text>
+</INVALID_FOR_VAR>
+<INVALID_VAR_REF_UNEXPECED_CHAR>
+	<text>Invalid variable reference. Unexpeced char '%s1' near position %s2.</text>
+</INVALID_VAR_REF_UNEXPECED_CHAR>
+<INVALID_VAR_REF_UNEXPECED_END>
+	<text>Invalid variable reference. Unexpeced end of line.</text>
+</INVALID_VAR_REF_UNEXPECED_END>
+<INVALID_VAR_REF_UNEXPECED_CHAR_EXPECED>
+	<text>Invalid variable reference. Unexpeced char '%s1' near position %s2. '%s3' was expeced.</text>
+</INVALID_VAR_REF_UNEXPECED_CHAR_EXPECED>
+<INVALID_VAR_REF_INVALID_INDEX>
+	<text>Invalid variable reference. Error near position %s2. Array index '%s1' is invalid.</text>
+</INVALID_VAR_REF_INVALID_INDEX>
+<INVALID_RETURN_STATEMENT>
+	<text>Line:%s1:%s2. %s3. Invalid return statement. Data type mismatch. Found '%s4', but '%s5' value was expected.</text>
+</INVALID_RETURN_STATEMENT>
+<INVALID_BREAK>
+	<text>Line:%s1:%s2. %s3. Invalid break statement. It is not embedded into a loop.</text>
+</INVALID_BREAK>
+<INVALID_CONNECTION>
+	<text>Query can not be executed. Connection is undefined.</text>
+</INVALID_CONNECTION>
+<INVALID_QUERY>
+	<text>Query can not be executed. Underlaying message is '%s1'</text>
+</INVALID_QUERY>
+<ERROR_EXECUTING_BUILTIN_FUNC>
+	<text>Error executing function '%s1'. Underlaying message is '%s2'</text>
+</ERROR_EXECUTING_BUILTIN_FUNC>
+<INVALID_SELECT_FUNCTION>
+	<text>Line:%s1:%s2. %s3. After select '%s4' uknown function was found.</text>
+</INVALID_SELECT_FUNCTION>
+<INVALID_SELECT_VAR_TYPE>
+	<text>Line:%s1:%s2. %s3. Result of select function can not be stored in a variable of type '%s4'.</text>
+</INVALID_SELECT_VAR_TYPE>
+<INVALID_SELECT_SET_EXPECTED>
+	<text>Line:%s1:%s2. %s3. Set expeced after FROM, but found '%s4'.</text>
+</INVALID_SELECT_SET_EXPECTED>
+<INVALID_SELECT_SET_OF_NUMERIC_EXPECTED>
+	<text>Line:%s1:%s2. %s3. Function '%s4' can only be applied over set of numeric values.</text>
+</INVALID_SELECT_SET_OF_NUMERIC_EXPECTED>
+<UNKOWN_COMPONENT_TYPE>
+	<text>Line:%s1:%s2. %s3. Unknown component type '%s4'.</text>
+</UNKOWN_COMPONENT_TYPE>
+<UNKOWN_COMPONENT_TYPE_COMMAND>
+	<text>Line:%s1:%s2. %s3. Unknown command '%s4'.</text>
+</UNKOWN_COMPONENT_TYPE_COMMAND>
+<UNKOWN_COMPONENT_TYPE_ATT>
+	<text>Line:%s1:%s2. %s3. Unknown component type attribute '%s4'.</text>
+</UNKOWN_COMPONENT_TYPE_ATT>
+<UNKOWN_COMPONENT_TYPE_PROP>
+	<text>Line:%s1:%s2. %s3. Unknown component type attribute '%s4'.</text>
+</UNKOWN_COMPONENT_TYPE_PROP>
+<ITERATOR_EXPECTED>
+	<text>Line:%s1:%s2. %s3. Variable '%s4' is not iterator.</text>
+</ITERATOR_EXPECTED>
+<CAN_NOT_ASSIGN_INPUT_ARG>
+	<text>Line:%s1:%s2. %s3. Input argument '%s4' can not be assigned.</text>
+</CAN_NOT_ASSIGN_INPUT_ARG>
+<ARGS_DOES_NOT_MATCH_REP_DEF>
+	<text>%s1. Arguments' does not match repository definition.</text>
+</ARGS_DOES_NOT_MATCH_REP_DEF>
+<CAN_NOT_BE_USED_AS_INDEX>
+	<text>Line:%s1:%s2. %s3. Datatype '%s4' can not be used as index array.</text>
+</CAN_NOT_BE_USED_AS_INDEX>
+<ARRAY_INDEX_OUT_OF_RANGE>
+	<text>Line:%s1. %s2 . Index %s3 is out range.</text>
+</ARRAY_INDEX_OUT_OF_RANGE>
+</IISCaseMsg>

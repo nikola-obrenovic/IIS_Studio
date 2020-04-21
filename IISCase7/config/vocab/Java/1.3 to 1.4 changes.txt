@@ -1,0 +1,42 @@
+AWT:
+----
+added MouseWheelEvent class
+added MouseWheelListener class
+added ActionEvent field "when"
+added Frame field "undecorated"
+added Dialog field "undecorated"
+added FileDialog field "undecorated"
+added WindowStateListener class
+added WindowEvent field "oldState"
+added WindowEvent field "newState"
+added MouseEvent field "button"
+added MouseEvent field "mouseModifiersText"
+
+SWING:
+------
+added JProgressBar field "indeterminate"
+added JFrame field "undecorated"
+added JDialog field "undecorated"
+added JTabbedPane field "tabLayoutPolicy"
+added JList field "layoutOrientation"
+added NEW PART JSpinner
+added NEW PART JFormattedTextField
+
+******************************************************************
+IGNORED
+
+AWT:
+----
+added InvocationEvent field "when"
+added InputMethodEvent field "when"
+added EventQueue field "mostRecentEventTime"
+added EventQueue field "currentTime"
+added InputEvent field "modifiersEx"
+added InputEvent field "modifiersExText"
+
+SWING:
+------
+added TransferHandler class
+added NEW PART JPopup
+added NEW PART JPopupFactory
+

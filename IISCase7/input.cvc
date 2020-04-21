@@ -1,0 +1,4 @@
+A : INT;
+
+ASSERT (A>2);
+QUERY (A/=1);

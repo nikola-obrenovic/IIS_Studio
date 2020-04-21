@@ -1,0 +1,32 @@
+#
+# MathSAT5 configuration file for the application track of SMT-COMP 2011
+#
+# (Load it with ./mathsat -config=THIS-FILE)
+
+# default settings for all divisions
+
+theory.la.pure_equality_filtering = true
+dpll.ghost_filtering = false
+preprocessor.simplification = 1
+dpll.branching_random_frequency = 0
+
+[QF_BV]
+preprocessor.toplevel_propagation = false
+theory.eq_propagation = false 
+theory.bv.eager = true 
+theory.bv.bit_blast_mode = 0
+theory.la.enabled = false
+theory.arr.enabled = false
+preprocessor.simplification = 3
+
+[QF_LIA]
+theory.arr.enabled = false
+theory.bv.enabled = false
+
+[QF_LRA]
+theory.arr.enabled = false
+theory.bv.enabled = false
+
+[QF_UFLIA]
+theory.arr.enabled = false
+theory.bv.enabled = false

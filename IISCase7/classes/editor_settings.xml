@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><Settings>
+<nativesqlconn>Faculty</nativesqlconn>
+<showgutter>true</showgutter>
+<view.bgColor>#ffffff</view.bgColor>
+<view.caretColor>#ff0000</view.caretColor>
+<view.eolMarkerColor>#6600ff</view.eolMarkerColor>
+<view.eolMarkers>false</view.eolMarkers>
+<view.font>Courier New</view.font>
+<view.fontsize>12</view.fontsize>
+<view.fontstyle>0</view.fontstyle>
+<view.gutter.bgColor>#ccccff</view.gutter.bgColor>
+<view.gutter.borderWidth>1</view.gutter.borderWidth>
+<view.gutter.fgColor>#000000</view.gutter.fgColor>
+<view.gutter.font>Courier New</view.gutter.font>
+<view.gutter.fontsize>10</view.gutter.fontsize>
+<view.gutter.fontstyle>0</view.gutter.fontstyle>
+<view.gutter.highlightCurrentLine>true</view.gutter.highlightCurrentLine>
+<view.gutter.highlightInterval>1</view.gutter.highlightInterval>
+<view.gutter.lineNumbers>true</view.gutter.lineNumbers>
+<view.gutter.numberAlignment>right</view.gutter.numberAlignment>
+<view.lineHighlight>true</view.lineHighlight>
+<view.lineHighlightColor>#ffffcc</view.lineHighlightColor>
+<watchlist>temp_1</watchlist>
+</Settings>

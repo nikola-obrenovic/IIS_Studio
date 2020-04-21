@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+
+<MODE>
+	<PROPS>
+		<PROPERTY NAME="commentStart" VALUE="/*" />
+		<PROPERTY NAME="commentEnd" VALUE="*/" />
+		<PROPERTY NAME="lineComment" VALUE="//" />
+        <PROPERTY NAME="lineComment" VALUE="Rem" />
+		<PROPERTY NAME="wordBreakChars" VALUE=",+-=&lt;&gt;/?^&amp;*" />
+
+		<!-- Auto indent -->
+		<!--<PROPERTY NAME="indentNextLine"
+			VALUE="\s*(((then|begin)\s*\(|else\s*|else\s+if\s*\(|do\s*\(.*\))[^{;]*)" /> -->
+		<PROPERTY NAME="indentNextLine"
+			VALUE="\s*(begin)" />
+	</PROPS>
+	<RULES IGNORE_CASE="TRUE"
+		HIGHLIGHT_DIGITS="FALSE"
+		DIGIT_RE="(0[lL]?|[1-9]\d{0,9}(\d{0,9}[lL])?|0[xX]\p{XDigit}{1,8}(\p{XDigit}{0,8}[lL])?|0[0-7]{1,11}([0-7]{0,11}[lL])?|([0-9]+\.[0-9]*|\.[0-9]+)([eE][+-]?[0-9]+)?[fFdD]?|[0-9]+([eE][+-]?[0-9]+[fFdD]?|([eE][+-]?[0-9]+)?[fFdD]))">
+
+		<SPAN TYPE="LITERAL1" ESCAPE="\" NO_LINE_BREAK="FALSE">
+			<BEGIN>"</BEGIN>
+			<END>"</END>
+		</SPAN>
+		
+		<SPAN TYPE="LITERAL1" ESCAPE="\" NO_LINE_BREAK="FALSE">
+			<BEGIN>'</BEGIN>
+			<END>'</END>
+		</SPAN>
+
+		<EOL_SPAN TYPE="COMMENT2">//</EOL_SPAN>
+
+		<SPAN TYPE="COMMENT1">
+			<BEGIN>/*</BEGIN>
+			<END>*/</END>
+		</SPAN>
+		
+		<EOL_SPAN TYPE="COMMENT2">rem</EOL_SPAN>
+		
+		<SEQ TYPE="OPERATOR">==</SEQ>
+		<SEQ TYPE="OPERATOR">!=</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;=</SEQ>
+		<SEQ TYPE="OPERATOR">+</SEQ>
+		<SEQ TYPE="OPERATOR">-</SEQ>
+		<SEQ TYPE="OPERATOR">/</SEQ>
+
+		<!-- workaround to stop "*" from being colorized
+		     in import statements. -->
+		<SEQ TYPE="NULL">.*</SEQ>
+
+		<SEQ TYPE="OPERATOR">*</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">%</SEQ>
+		<SEQ TYPE="OPERATOR">AND</SEQ>
+		<SEQ TYPE="OPERATOR">OR</SEQ>
+		<SEQ TYPE="OPERATOR">XOR</SEQ>
+		<SEQ TYPE="OPERATOR">=&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">}</SEQ>
+		<SEQ TYPE="OPERATOR">{</SEQ>
+		
+		<!-- Function calls -->
+		<MARK_PREVIOUS TYPE="FUNCTION" MATCH_TYPE="OPERATOR">(</MARK_PREVIOUS>
+		<SEQ TYPE="OPERATOR">)</SEQ>
+
+		<!-- Annotation types -->
+		<MARK_FOLLOWING TYPE="KEYWORD4">@</MARK_FOLLOWING>
+
+		<KEYWORDS>
+			<KEYWORD1>do</KEYWORD1>
+			<KEYWORD1>break</KEYWORD1>
+			<KEYWORD1>case</KEYWORD1>
+			<KEYWORD1>catch</KEYWORD1>
+			<KEYWORD1>continue</KEYWORD1>
+			<KEYWORD1>default</KEYWORD1>
+			<KEYWORD1>else</KEYWORD1>
+			<KEYWORD1>for</KEYWORD1>
+			<KEYWORD1>if</KEYWORD1>
+			<KEYWORD1>return</KEYWORD1>
+			<KEYWORD1>switch</KEYWORD1>
+			<KEYWORD1>end_case</KEYWORD1>
+			<KEYWORD1>end_switch</KEYWORD1>
+			<KEYWORD1>default</KEYWORD1>
+			<KEYWORD1>while</KEYWORD1>
+            <KEYWORD1>function</KEYWORD1>
+            <KEYWORD1>begin</KEYWORD1>
+            <KEYWORD1>input</KEYWORD1>
+            <KEYWORD1>output</KEYWORD1>
+            <KEYWORD1>end</KEYWORD1>
+            <KEYWORD1>then</KEYWORD1>
+			<KEYWORD1>end_if</KEYWORD1>
+			<KEYWORD1>end_while</KEYWORD1>
+			<KEYWORD1>end_for</KEYWORD1>
+			<KEYWORD1>repeat</KEYWORD1>
+			<KEYWORD1>until</KEYWORD1>
+			<KEYWORD1>end_repeat</KEYWORD1>
+			<KEYWORD1>select</KEYWORD1>
+			<KEYWORD1>from</KEYWORD1>
+			<KEYWORD1>into</KEYWORD1>
+			<KEYWORD1>var</KEYWORD1>
+            <KEYWORD1>end_var</KEYWORD1>
+			<KEYWORD1>fetch</KEYWORD1>
+			<KEYWORD1>update</KEYWORD1>
+			<KEYWORD1>value</KEYWORD1>
+			<LITERAL2>false</LITERAL2>
+			<LITERAL2>true</LITERAL2>
+
+			<INVALID>const</INVALID>
+
+		</KEYWORDS>
+	</RULES>
+</MODE>

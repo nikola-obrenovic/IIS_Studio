@@ -1,0 +1,78 @@
+#
+# MathSAT5 configuration file for the main track of SMT-COMP 2011
+#
+# (Load it with ./mathsat -config=THIS-FILE)
+
+[QF_AUFLIA]
+theory.la.pure_equality_filtering = true 
+theory.arr.enable_nonlinear = true 
+theory.la.detect_euf_fragment = true 
+theory.la.delay_alien = true
+theory.euf.dyn_ack = 2
+theory.euf.dyn_ack_threshold = 100
+theory.bv.enabled = false 
+theory.arr.permanent_lemma_inst = true 
+theory.arr.enable_witness = true
+dpll.ghost_filtering = false
+dpll.branching_random_frequency = 0
+preprocessor.simplification = 5
+
+[QF_BV]
+theory.eq_propagation = false 
+theory.bv.eager = true
+dpll.branching_random_frequency = 0 
+preprocessor.simplification = 3
+theory.la.enabled = false 
+theory.arr.enabled = false
+theory.bv.bit_blast_mode = 1
+
+[QF_AUFBV, QF_ABV]
+theory.la.enabled = false
+theory.bv.delay_propagated_eqs = true
+theory.arr.max_wr_lemmas = 0
+theory.arr.enable_nonlinear = true
+theory.arr.enable_witness = false
+preprocessor.toplevel_propagation = true
+preprocessor.simplification = 7
+theory.arr.permanent_lemma_inst = true
+dpll.branching_random_frequency = 0 
+
+[QF_AX]
+theory.bv.enabled = false
+theory.la.enabled = false
+preprocessor.simplification = 7 
+theory.arr.permanent_lemma_inst = true 
+dpll.branching_random_frequency = 0 
+theory.euf.dyn_ack = 2 
+theory.euf.dyn_ack_threshold = 10 
+theory.arr.enable_nonlinear = true
+
+[QF_LIA]
+theory.arr.enabled = false
+theory.bv.enabled = false
+dpll.branching_random_frequency = 0
+
+[QF_LRA]
+theory.arr.enabled = false
+theory.bv.enabled = false
+
+[QF_UF]
+theory.arr.enabled = false
+theory.bv.enabled = false
+theory.la.enabled = false
+
+[QF_UFLIA]
+theory.arr.enabled = false
+theory.bv.enabled = false
+
+[QF_UFLRA]
+theory.arr.enabled = false
+theory.bv.enabled = false
+
+[QF_UFBV]
+theory.bv.eager = true
+dpll.branching_random_frequency = 0 
+preprocessor.simplification = 3
+theory.la.enabled = false 
+theory.arr.enabled = false
+theory.bv.bit_blast_mode = 1

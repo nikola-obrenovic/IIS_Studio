@@ -1,0 +1,6688 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<uiml>
+<interface id="IISUIModeler">
+<structure>
+<part id="MainFrame" class="JFrame">
+<style>
+<property  name="bounds">240,100,800,600</property>
+<property  name="title">Faculty Organization</property>
+<property  name="iconImage">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="resizable">true</property>
+</style>
+
+<part id="mainMenubar" class="JMenuBar">
+<part id="mainFile" class="JMenu">
+<style>
+<property  name="text">File</property>
+<property  name="mnemonic">70</property>
+</style>
+<part id="mainApp" class="JMenuItem">
+<style>
+<property  name="text">Application</property>
+<property  name="mnemonic">67</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compType" name="visible">true</property>
+<property  part-name="25LoVButton" name="visible">false</property>
+<property  part-name="25DataPanel" name="caller">-1</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="mainClose" class="JMenuItem">
+<style>
+<property  name="text">Close</property>
+<property  name="mnemonic">67</property>
+</style>
+</part>
+<part id="mainSeparate" class="JSeparator"/>
+<part id="mainQuit" class="JMenuItem">
+<style>
+<property  name="text">Quit</property>
+<property  name="mnemonic">81</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="MainFrame" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="mainHelp" class="JMenu">
+<style>
+<property  name="text">Help</property>
+<property  name="mnemonic">72</property>
+</style>
+<part id="mainAbout" class="JMenuItem">
+<style>
+<property  name="text">About</property>
+<property  name="mnemonic">65</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="About" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="dtp" class="JDesktopPane">
+<style>
+<property  name="background">64b9e4</property>
+</style>
+<part id="25compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">0,0,600,652</property>
+</style>
+<part id="25compTypeMenu" class="JMenuBar">
+<part id="36compTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Major</property>
+<property  name="minimumSize">40,10</property>
+<property  name="maximumSize">50,10</property>
+<property  name="mnemonic">77</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36compType" name="visible">true</property>
+<property  part-name="36LoVButton" name="visible">false</property>
+<property  part-name="25DataPanel" name="caller">-1</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="30compTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Student catalog</property>
+<property  name="background">ffffff</property>
+<property  name="foreground">000066</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+<property  name="minimumSize">100,10</property>
+<property  name="minimumSize">110,10</property>
+<property  name="mnemonic">83</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50compType" name="visible">true</property>
+<property  part-name="50DataPanel" name="caller">12</property>
+<property  part-name="50LoVButton" name="visible">false</property>
+<property  part-name="50compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="15compTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Courses and exams</property>
+<property  name="background">ffffff</property>
+<property  name="foreground">000066</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+<property  name="minimumSize">112,10</property>
+<property  name="minimumSize">122,10</property>
+<property  name="mnemonic">67</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34compType" name="visible">true</property>
+<property  part-name="34DataPanel" name="caller">12</property>
+<property  part-name="34LoVButton" name="visible">false</property>
+<property  part-name="34compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="13compTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Person information</property>
+<property  name="background">ffffff</property>
+<property  name="foreground">000066</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+<property  name="minimumSize">118,10</property>
+<property  name="minimumSize">128,10</property>
+<property  name="mnemonic">80</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28compType" name="visible">true</property>
+<property  part-name="28Table" name="caller">12</property>
+<property  part-name="28LoVButton" name="visible">false</property>
+<property  part-name="28compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+
+<part id="25Parameters" class="JPanel">
+<style>
+<property  name="bounds">505,0,85,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="25ParametersButton" class="JButton">
+<style>
+<property  name="text">Parameters</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="12formTypeParameters" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="25compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,590,303</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="25Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,465,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty</property>
+</style>
+</part>
+<part id="25Toolbar" class="JPanel">
+<style>
+<property  name="opaque">false</property>
+<property  name="bounds">10,29,143,40</property>
+</style>
+<part id="14ToolbarButton" class="JButton">
+<style>
+<property  name="text">Student</property>
+<property  name="preferredSize">75,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29compType" name="visible">true</property>
+<property  part-name="29DataPanel" name="caller">12</property>
+<property  part-name="29LoVButton" name="visible">false</property>
+<property  part-name="25compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="25DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,79,570,204</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">25</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="2525itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,550,184</property>
+<property  name="preferredSize">550,184</property>
+<property  name="border">TitledBorder,Faculty details</property>
+<property  name="name">Faculty details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="4425InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Faculty ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4425InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">188,24,150,20</property>
+</style>
+</part>
+<part id="4625InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Faculty short name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4625InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">188,56,150,20</property>
+</style>
+</part>
+<part id="4525InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,88,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Faculty name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4525InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">188,88,150,20</property>
+</style>
+</part>
+<part id="5825InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,120,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Dean</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5825InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">188,120,150,20</property>
+</style>
+</part>
+<part id="13525InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,152,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">NumOfDep</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="13525InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">138,152,200,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="1FuncCalcButton" class="JButton">
+<style>
+<property  name="bounds">110,110,50,50</property>
+<property  name="text">Proba</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="47compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,303,590,203</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="47Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,465,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Department</property>
+</style>
+</part>
+<part id="47TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,29,530,154</property>
+</style>
+<part id="47Table" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">47</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+</part>
+<part id="25NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,506,600,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="25SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="25NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25SearchButton" class="JButton">
+<style>
+<property  name="text">Search</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="reset">0</property>
+<property  part-name="25compTypeSearch" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="25ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,541,600,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="25NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25MasiveDeleteButton" class="JButton">
+<style>
+<property  name="text">Masive del.</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compTypeMasiveDelete" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">lov</property>
+<property  part-name="25compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="47NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,506,600,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="47FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="47NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="47ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,541,600,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="47NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">insert</property>
+<property  part-name="47compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">duplicate</property>
+<property  part-name="47compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47MasiveDeleteButton" class="JButton">
+<style>
+<property  name="text">Masive del.</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47compTypeMasiveDelete" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47ApplyButton" class="JButton">
+<style>
+<property  name="text">Edit</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">update</property>
+<property  part-name="47compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">lov</property>
+<property  part-name="47compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="28compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Person information</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">125,139,540,323</property>
+</style>
+<part id="28compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,203</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="28Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,490,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Person information</property>
+</style>
+</part>
+<part id="28TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,29,270,154</property>
+</style>
+<part id="28Table" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">28</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+<part id="28OverflowScroll" class="JScrollPane">
+<style>
+<property  name="bounds">290,29,200,154</property>
+</style>
+<part id="228itemGroup" class="JPanel">
+<style>
+<property  name="bounds">0,0,174,88</property>
+<property  name="preferredSize">174,88</property>
+<property  name="name">Other</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5628InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">E-mail</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5628overflowInputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">75,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="5528InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Telephone</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5528overflowInputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">75,56,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="28NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,203,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="28SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="28NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28SearchButton" class="JButton">
+<style>
+<property  name="text">Search</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="reset">0</property>
+<property  part-name="28compTypeSearch" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="28ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,238,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="28NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">insert</property>
+<property  part-name="28compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">duplicate</property>
+<property  part-name="28compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28ApplyButton" class="JButton">
+<style>
+<property  name="text">Edit</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">update</property>
+<property  part-name="28compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">lov</property>
+<property  part-name="28compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="29compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Student</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">2,30,540,620</property>
+</style>
+
+<part id="29Parameters" class="JPanel">
+<style>
+<property  name="bounds">445,0,85,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="29ParametersButton" class="JButton">
+<style>
+<property  name="text">Parameters</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="14formTypeParameters" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="29compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,375</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="29Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,405,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Student</property>
+</style>
+</part>
+<part id="29DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,510,326</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">29</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="2629itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,490,88</property>
+<property  name="preferredSize">490,88</property>
+<property  name="border">TitledBorder,Personal data</property>
+<property  name="name">Personal data</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5729InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,112,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Personal ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5729InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">124,24,45,20</property>
+</style>
+</part>
+<part id="86SearchLoVButton" class="JButton">
+<style>
+<property  name="text">...</property>
+<property  name="bounds">170,24,30,20</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="resetL">0</property>
+<property  part-name="28compType" name="visible">true</property>
+<property  part-name="28LoVButton" name="visible">true</property>
+<property  part-name="28Table" name="LoV">3</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="5129InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,112,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Name and surname</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5129InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">124,56,75,20</property>
+</style>
+</part>
+</part>
+<part id="2729itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,108,490,88</property>
+<property  name="preferredSize">490,88</property>
+<property  name="border">TitledBorder,Faculty data</property>
+<property  name="name">Faculty data</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="4629InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Faculty short name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4629InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">138,24,45,20</property>
+</style>
+</part>
+<part id="75SearchLoVButton" class="JButton">
+<style>
+<property  name="text">...</property>
+<property  name="bounds">184,24,30,20</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="resetL">0</property>
+<property  part-name="25compType" name="visible">true</property>
+<property  part-name="25LoVButton" name="visible">true</property>
+<property  part-name="25DataPanel" name="LoV">2</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="4829InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,126,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Department name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4829InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">138,56,75,20</property>
+</style>
+</part>
+</part>
+<part id="629itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,206,490,56</property>
+<property  name="preferredSize">490,56</property>
+<property  name="border">TitledBorder,Year of study</property>
+<property  name="name">Year of study</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="6029InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Year of study</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6029InputField" class="JComboBox">
+<style>
+<property  name="content"><constant model="list">
+<constant value="2007"/>
+<constant value="2008"/>
+<constant value="2009"/>
+<constant value="2010"/>
+</constant>
+</property>
+<property  name="bounds">103,24,50,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+<part id="3029itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,272,490,44</property>
+<property  name="preferredSize">490,44</property>
+<property  name="border">TitledBorder,Student ID</property>
+<property  name="name">Student ID</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5929InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,70,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Student ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5929InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">82,24,75,20</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="59compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,375,530,125</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="59Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,405,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Major</property>
+</style>
+</part>
+<part id="59DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,510,76</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">59</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1859itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,490,56</property>
+<property  name="preferredSize">490,56</property>
+<property  name="border">TitledBorder,Major details</property>
+<property  name="name">Major details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5059InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,70,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Major name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5059InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">82,24,70,20</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="29NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,500,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="29SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="29NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="29ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,535,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="29NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29DataPanel" name="setAction">lov</property>
+<property  part-name="29compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="29Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="59NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,500,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="59FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="59NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="59ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,535,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="59NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="59DataPanel" name="setAction">lov</property>
+<property  part-name="59compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="59Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="29compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="34compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Courses and exams</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">0,5,604,698</property>
+</style>
+<part id="34compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,594,375</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="34Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,554,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Course</property>
+</style>
+</part>
+<part id="34DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,584,382</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">34</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1134itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,564,144</property>
+<property  name="preferredSize">564,144</property>
+<property  name="border">TitledBorder,Additional data</property>
+<property  name="name">Additional data</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="7234InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Prerequisite exam</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="7234InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">131,24,75,20</property>
+</style>
+</part>
+<part id="6434InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Lecturer</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6434InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">156,56,50,20</property>
+</style>
+</part>
+<part id="934nestedItemGroup" class="JPanel">
+<style>
+<property  name="bounds">12,76,530,56</property>
+<property  name="border">TitledBorder,Other</property>
+<property  name="name">Other</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="6034InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Year of study</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6034InputField" class="JComboBox">
+<style>
+<property  name="content"><constant model="list">
+<constant value="2007"/>
+<constant value="2008"/>
+<constant value="2009"/>
+<constant value="2010"/>
+</constant>
+</property>
+<property  name="bounds">203,24,50,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="6334InputLabel" class="JLabel">
+<style>
+<property  name="bounds">265,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Semester</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6334InputField" class="ButtonGroup">
+<part id="6334InputField0" class="JRadioButton">
+<style>
+<property  name="text">I</property>
+<property  name="bounds">356,24,75,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+<part id="6334InputField1" class="JRadioButton">
+<style>
+<property  name="text">II</property>
+<property  name="bounds">431,24,75,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="2834itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,164,564,88</property>
+<property  name="preferredSize">564,88</property>
+<property  name="border">TitledBorder,Course details</property>
+<property  name="name">Course details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="11834InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course short name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="11834InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">131,24,75,20</property>
+</style>
+</part>
+<part id="11434InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="11434InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">156,56,50,20</property>
+</style>
+</part>
+</part>
+<part id="2934itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,262,208,56</property>
+<property  name="preferredSize">208,56</property>
+<property  name="border">TitledBorder,Course ID</property>
+<property  name="name">Course ID</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="6634InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6634InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">75,24,75,20</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="58compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,375,291,203</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="58Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,251,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Exam</property>
+</style>
+</part>
+<part id="58TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,29,231,154</property>
+</style>
+<part id="58Table" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">58</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+</part>
+<part id="31compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">301,375,302,203</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="31Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,262,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Course timetable</property>
+</style>
+</part>
+<part id="31TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,29,242,154</property>
+</style>
+<part id="31Table" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">31</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+</part>
+<part id="34NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">32,578,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="34SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="34NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="34ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">32,613,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="34NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34DataPanel" name="setAction">lov</property>
+<property  part-name="34compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="34Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="58NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">32,578,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="58FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="58NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="58ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">32,613,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="58NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">insert</property>
+<property  part-name="58compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">duplicate</property>
+<property  part-name="58compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58ApplyButton" class="JButton">
+<style>
+<property  name="text">Edit</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">update</property>
+<property  part-name="58compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">lov</property>
+<property  part-name="58compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="31NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">32,578,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="31FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="31NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="31ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">32,613,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">false</property>
+</style>
+<part id="31NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">insert</property>
+<property  part-name="31compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">duplicate</property>
+<property  part-name="31compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31ApplyButton" class="JButton">
+<style>
+<property  name="text">Edit</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">update</property>
+<property  part-name="31compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">lov</property>
+<property  part-name="31compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="34compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="33compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Catalog of passed exams</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">125,155,540,291</property>
+</style>
+<part id="33compTypeMenu" class="JMenuBar">
+<part id="35compTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">List of exams passed</property>
+<property  name="minimumSize">130,10</property>
+<property  name="maximumSize">140,10</property>
+<property  name="mnemonic">76</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35compType" name="visible">true</property>
+<property  part-name="35LoVButton" name="visible">false</property>
+<property  part-name="33DataPanel" name="caller">-1</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="33compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,145</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="33Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,490,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Student</property>
+</style>
+</part>
+<part id="33DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,510,96</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">33</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="833itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,490,76</property>
+<property  name="preferredSize">490,76</property>
+<property  name="border">TitledBorder,Item Group 8</property>
+<property  name="name">Item Group 8</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5933InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Student ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5933InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">103,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="6033InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Year of study</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6033InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">103,56,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="33NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,145,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="33SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="33NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="33ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,180,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="33NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33OKButton" class="JButton">
+<style>
+<property  name="visible">false</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33DataPanel" name="setAction">lov</property>
+<property  part-name="33compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="33Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="33compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="43compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">List of courses</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">125,130,540,341</property>
+</style>
+<part id="43compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,221</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="43Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,490,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">EXAM</property>
+</style>
+</part>
+<part id="43DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,510,172</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">43</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1443itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,490,152</property>
+<property  name="preferredSize">490,152</property>
+<property  name="border">TitledBorder,Item Group 14</property>
+<property  name="name">Item Group 14</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="11843InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course short name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="11843InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">131,24,75,20</property>
+</style>
+</part>
+<part id="11443InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="11443InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">131,56,75,20</property>
+</style>
+</part>
+<part id="7243InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,88,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Prerequisite exam</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="7243InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">131,88,75,20</property>
+</style>
+</part>
+<part id="6643InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,120,119,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6643InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">131,120,75,20</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="43NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,221,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="43SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="43NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="43ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,256,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="43NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43DataPanel" name="setAction">lov</property>
+<property  part-name="43compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="43Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="43compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="50compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Student catalog</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">E:\mywork\IISCASE\IISUIModeler\icons\IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">125,178,540,245</property>
+</style>
+<part id="50compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,125</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="50Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,490,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Student</property>
+</style>
+</part>
+<part id="50DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,510,76</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">50</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1650itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,490,56</property>
+<property  name="preferredSize">490,56</property>
+<property  name="border">TitledBorder,Catalog data</property>
+<property  name="name">Catalog data</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="6050InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Year of study</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6050InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">103,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="5950InputLabel" class="JLabel">
+<style>
+<property  name="bounds">190,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Student ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5950InputField" class="JTextField">
+<style>
+<property  name="text">null</property>
+<property  name="bounds">281,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="50NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,125,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="50SelectButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">select</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="50NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="50ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,160,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="50NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50OKButton" class="JButton">
+<style>
+<property  name="visible">false</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50DataPanel" name="setAction">lov</property>
+<property  part-name="50compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="50Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="50compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+</part>
+<part id="35compType" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Catalog of passed exams</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,361</property>
+</style>
+<part id="35compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,241</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="35Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,490,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">List of exams passed</property>
+</style>
+</part>
+<part id="35masterDetail" class="JPanel">
+<style>
+<property  name="bounds">25,9,510,52</property>
+<property  name="preferredSize">510,52</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="5935InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,91,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Student ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5935MasterInputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">103,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+<part id="35DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,81,510,140</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">35</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1235itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,490,120</property>
+<property  name="preferredSize">490,120</property>
+<property  name="border">TitledBorder,Item Group 12</property>
+<property  name="name">Item Group 12</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="6635InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Course ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6635InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">75,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="6835InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Grade</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6835InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">75,56,75,20</property>
+</style>
+</part>
+<part id="11635InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,88,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Date</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="11635InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">75,88,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="35NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,241,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="35FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="35NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="35ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,276,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="35NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">insert</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">duplicate</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35ApplyButton" class="JButton">
+<style>
+<property  name="text">Apply</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">save</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35DataPanel" name="setAction">lov</property>
+<property  part-name="35compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="35Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="35compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="16formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Catalog of passed exams Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="16Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Catalog of passed exams Parameters</property>
+</style>
+</part>
+<part id="16ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="16ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="16ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="16Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="16formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="16formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Catalog of passed exams Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="16Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Catalog of passed exams Parameters</property>
+</style>
+</part>
+<part id="16ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="16ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="16ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="16Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="16formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="25formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">List of courses Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="25Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">List of courses Parameters</property>
+</style>
+</part>
+<part id="25ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="25ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="25ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="25Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="30formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Student catalog Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="30Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Student catalog Parameters</property>
+</style>
+</part>
+<part id="30ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="30ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="30ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="30Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="30formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="36compType" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,407</property>
+</style>
+<part id="36compTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,10,530,287</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="36Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">0,0,490,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Major</property>
+</style>
+</part>
+<part id="36masterDetail" class="JPanel">
+<style>
+<property  name="bounds">0,9,490,84</property>
+<property  name="preferredSize">490,84</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="4736InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,105,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Department ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4736MasterInputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">117,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="4836InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,105,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Department name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4836MasterInputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">117,56,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+<part id="36TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,113,470,154</property>
+</style>
+<part id="36Table" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">36</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+</part>
+<part id="36NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">0,287,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="36FirstButton" class="JButton">
+<style>
+<property  name="text">First</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">first</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36PrevButton" class="JButton">
+<style>
+<property  name="text">Prev</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">previos</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Records: 0</property>
+</style>
+</part>
+<part id="36NextButton" class="JButton">
+<style>
+<property  name="text">Next</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">next</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36LastButton" class="JButton">
+<style>
+<property  name="text">Last</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">last</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="36ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,322,540,35</property>
+<property  name="opaque">false</property>
+<property  name="visible">true</property>
+</style>
+<part id="36NewButton" class="JButton">
+<style>
+<property  name="text">New</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">insert</property>
+<property  part-name="36compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36DuplicateButton" class="JButton">
+<style>
+<property  name="text">Duplicate</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">duplicate</property>
+<property  part-name="36compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">delete</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36ApplyButton" class="JButton">
+<style>
+<property  name="text">Edit</property>
+<property  name="visible">true</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">update</property>
+<property  part-name="36compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36OKButton" class="JButton">
+<style>
+<property  name="visible">true</property>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36LoVButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+<property  name="visible">false</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">lov</property>
+<property  part-name="36compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="47compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,227</property>
+</style>
+<part id="47Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,520,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Department Input Form</property>
+</style>
+</part>
+<part id="47DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,540,108</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">47</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1547itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,520,88</property>
+<property  name="preferredSize">520,88</property>
+<property  name="border">TitledBorder,Department details</property>
+<property  name="name">Department details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="4747InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,105,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Department ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4747InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">117,24,75,20</property>
+</style>
+</part>
+<part id="4847InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,105,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Department name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4847InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">117,56,75,20</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="47InputButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,147,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="47InputOKButton" class="JButton">
+<style>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">save</property>
+<property  part-name="47compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47InputCancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="36compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,227</property>
+</style>
+<part id="36Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,520,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Major Input Form</property>
+</style>
+</part>
+<part id="36DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,540,108</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">36</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1336itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,520,88</property>
+<property  name="preferredSize">520,88</property>
+<property  name="border">TitledBorder,Major details</property>
+<property  name="name">Major details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="4936InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,70,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Major ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="4936InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">87,24,70,20</property>
+</style>
+</part>
+<part id="5036InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,70,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Major name</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5036InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">82,56,75,20</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="36InputButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,147,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="36InputOKButton" class="JButton">
+<style>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36Table" name="setAction">save</property>
+<property  part-name="36compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36InputCancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="36compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="28compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Person information Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,345</property>
+</style>
+<part id="28Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,520,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Person information Input Form</property>
+</style>
+</part>
+<part id="28DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,540,226</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">28</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="328itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,520,108</property>
+<property  name="preferredSize">520,108</property>
+<property  name="border">TitledBorder,Person details</property>
+<property  name="name">Person details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5728InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,112,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Personal ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5728InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">124,24,75,20</property>
+</style>
+</part>
+<part id="5128InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,112,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Name and surname</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5128InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">124,56,75,20</property>
+</style>
+</part>
+<part id="5428InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,88,112,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Address</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5428InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">124,88,75,20</property>
+</style>
+</part>
+</part>
+<part id="228itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,128,520,88</property>
+<property  name="preferredSize">520,88</property>
+<property  name="border">TitledBorder,Other</property>
+<property  name="name">Other</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="5628InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">E-mail</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5628InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">75,24,75,20</property>
+</style>
+</part>
+<part id="5528InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,63,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Telephone</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="5528InputField" class="JTextField">
+<style>
+<property  name="text">default varchar</property>
+<property  name="bounds">75,56,75,20</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="28InputButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,265,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="28InputOKButton" class="JButton">
+<style>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setAction">save</property>
+<property  part-name="28compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28InputCancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="58compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Courses and exams Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,259</property>
+</style>
+<part id="58Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,520,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Exam Input Form</property>
+</style>
+</part>
+<part id="58DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,540,140</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">58</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1758itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,520,120</property>
+<property  name="preferredSize">520,120</property>
+<property  name="border">TitledBorder,Exam details</property>
+<property  name="name">Exam details</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="6958InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,56,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Datetime</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6958InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">68,24,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="6258InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,56,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Exam ID</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6258InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">68,56,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="11558InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,88,56,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Examiner</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="11558InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">68,88,75,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="58InputButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,179,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="58InputOKButton" class="JButton">
+<style>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58Table" name="setAction">save</property>
+<property  part-name="58compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="58InputCancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="58compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="31compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Courses and exams Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">false</property>
+<property  name="bounds">265,170,550,299</property>
+</style>
+<part id="31Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,520,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Course timetable Input Form</property>
+</style>
+</part>
+<part id="31DataPanel" class="DataPanel">
+<style>
+<property  name="bounds">0,29,540,180</property>
+<property  name="layout">null</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">31</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+<property  name="opaque">false</property>
+</style>
+<part id="731itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,520,160</property>
+<property  name="preferredSize">520,160</property>
+<property  name="border">TitledBorder,Timetable data</property>
+<property  name="name">Timetable data</property>
+<property  name="background">e4e4e4</property>
+<property  name="layout">null</property>
+<property  name="visible">true</property>
+</style>
+<part id="6731InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,24,84,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Time</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6731InputField" class="JTextField">
+<style>
+<property  name="text">00:00:00</property>
+<property  name="bounds">171,24,75,20</property>
+</style>
+</part>
+<part id="6531InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,56,84,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Day in weeki</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="6531InputField" class="JComboBox">
+<style>
+<property  name="content"><constant model="list">
+<constant value="Ponedeljak"/>
+<constant value="Utorak"/>
+<constant value="Srijeda"/>
+<constant value="Cetvrtak"/>
+<constant value="Petak"/>
+</constant>
+</property>
+<property  name="selectedIndex">-1</property>
+<property  name="bounds">96,56,150,20</property>
+<property  name="editable">false</property>
+</style>
+</part>
+<part id="8931InputLabel" class="JLabel">
+<style>
+<property  name="bounds">12,88,84,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Classroom</property>
+<property  name="font">SansSerif.bold-bold-11</property>
+</style>
+</part>
+
+<part id="8931InputFieldScrollPane" class="JScrollPane">
+<style>
+<property  name="border">EtchedBorder</property>
+</style>
+<part id="8931InputField" class="JList">
+<style>
+<property  name="content"><constant model="list">
+<constant value="102"/>
+<constant value="103"/>
+<constant value="104"/>
+<constant value="105"/>
+<constant value="106"/>
+</constant>
+</property>
+</style>
+</part>
+<style>
+<property  name="bounds">171,88,75,60</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="31InputButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,219,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="31InputOKButton" class="JButton">
+<style>
+<property  name="text">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31Table" name="setAction">save</property>
+<property  part-name="31compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="31InputCancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="31compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="25compTypeSearch" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Search Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,530,473</property>
+</style>
+<part id="25Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,500,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty Search Form</property>
+</style>
+</part>
+<part id="25Search" class="JPanel">
+<style>
+<property  name="bounds">20,39,480,175</property>
+<property  name="border">TitledBorder,</property>
+<property  name="background">e4e4e4</property>
+</style>
+<part id="69SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Faculty ID</property>
+</style>
+</part>
+<part id="4425SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="4425SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="4425SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="4425SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="4425SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="71SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Faculty short name</property>
+</style>
+</part>
+<part id="4625SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="4625SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="4625SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="4625SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="4625SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="70SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Faculty name</property>
+</style>
+</part>
+<part id="4525SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="4525SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="4525SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="4525SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="4525SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="83SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Dean</property>
+</style>
+</part>
+<part id="5825SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="5825SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="5825SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="5825SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="5825SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="160SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">NumOfDep</property>
+</style>
+</part>
+<part id="13525SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="13525SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="13525SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="13525SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="13525SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="25Filter" class="JButton">
+<style>
+<property  name="text">Search</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setSearch">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25Reset" class="JButton">
+<style>
+<property  name="text">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="reset">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="25SearchTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,224,480,154</property>
+</style>
+<part id="25SearchTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="25ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,393,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="25OKButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compTypeSearch" name="visible">false</property>
+<property  part-name="25DataPanel" name="setSearchChoice">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compTypeSearch" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="28compTypeSearch" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Person information Search Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,530,473</property>
+</style>
+<part id="28Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,500,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Person information Search Form</property>
+</style>
+</part>
+<part id="28Search" class="JPanel">
+<style>
+<property  name="bounds">20,39,480,175</property>
+<property  name="border">TitledBorder,</property>
+<property  name="background">e4e4e4</property>
+</style>
+<part id="85SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Personal ID</property>
+</style>
+</part>
+<part id="5728SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="5728SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="5728SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="5728SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="5728SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="79SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Name and surname</property>
+</style>
+</part>
+<part id="5128SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="5128SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="5128SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="5128SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="5128SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="82SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Address</property>
+</style>
+</part>
+<part id="5428SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="5428SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="5428SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="5428SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="5428SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="84SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">E-mail</property>
+</style>
+</part>
+<part id="5628SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="5628SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="5628SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="5628SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="5628SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="83SearchLabel" class="JLabel">
+<style>
+<property  name="preferredSize">150,21</property>
+<property  name="text">Telephone</property>
+</style>
+</part>
+<part id="5528SearchComboCompare" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="5528SearchComboCompare" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="5528SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">180,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="5528SearchComboOrder" class="JComboBox">
+<style>
+<property  name="preferredSize">60,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="asc"/>
+<constant value="desc"/>
+</constant>
+</property>
+<property  part-name="5528SearchComboOrder" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="28Filter" class="JButton">
+<style>
+<property  name="text">Search</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="setSearch">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28Reset" class="JButton">
+<style>
+<property  name="text">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28Table" name="reset">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="28SearchTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,224,480,154</property>
+</style>
+<part id="28SearchTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="28ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">0,393,540,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="28OKButton" class="JButton">
+<style>
+<property  name="text">Select</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28compTypeSearch" name="visible">false</property>
+<property  part-name="28Table" name="setSearchChoice">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="28Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="28compTypeSearch" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="25compTypeMasiveDelete" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Masive Delete</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="12Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty Masive Delete</property>
+</style>
+</part>
+<part id="25MasiveDeleteTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="25MasiveDeleteTable" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">25</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+
+<part id="25ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">65,225,400,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="36DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setMasiveDelete">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36DeleteAllButton" class="JButton">
+<style>
+<property  name="text">Delete All</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25DataPanel" name="setAction">deleteAll</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="25Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="25compTypeMasiveDelete" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="47compTypeMasiveDelete" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Masive Delete</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="12Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty Masive Delete</property>
+</style>
+</part>
+<part id="47MasiveDeleteTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="47MasiveDeleteTable" class="DataTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="url">jdbc:odbc:Faculty</property>
+<property  name="username">admin</property>
+<property  name="password"></property>
+<property  name="comp">47</property>
+<property  name="pr">3</property>
+<property  name="as">7</property>
+</style>
+</part>
+</part>
+
+<part id="47ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">65,225,400,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="36DeleteButton" class="JButton">
+<style>
+<property  name="text">Delete</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setMasiveDelete">0</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="36DeleteAllButton" class="JButton">
+<style>
+<property  name="text">Delete All</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47Table" name="setAction">deleteAll</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="47Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="47compTypeMasiveDelete" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="12formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="12Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty Parameters</property>
+</style>
+</part>
+<part id="12ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="12ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="12ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="12Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="12formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="12formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="12Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty Parameters</property>
+</style>
+</part>
+<part id="12ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="12ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="12ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="12Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="12formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="12formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Faculty Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="12Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Faculty Parameters</property>
+</style>
+</part>
+<part id="12ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="12ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="12ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="12Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="12formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="13formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Person information Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="13Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Person information Parameters</property>
+</style>
+</part>
+<part id="13ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="13ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="13ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="13Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="13formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="14formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Student Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="14Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Student Parameters</property>
+</style>
+</part>
+<part id="14ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="14ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="14ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="14Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="14formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="14formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Student Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="14Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Student Parameters</property>
+</style>
+</part>
+<part id="14ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="14ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="14ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="14Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="14formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="15formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Courses and exams Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="15Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Courses and exams Parameters</property>
+</style>
+</part>
+<part id="15ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="15ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="15ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="15Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="15formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="15formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Courses and exams Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="15Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Courses and exams Parameters</property>
+</style>
+</part>
+<part id="15ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="15ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="15ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="15Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="15formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="15formTypeParameters" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Courses and exams Parameters</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">265,170,410,300</property>
+</style>
+<part id="15Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,10,360,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Courses and exams Parameters</property>
+</style>
+</part>
+<part id="15ParametersTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">20,39,360,181</property>
+</style>
+<part id="15ParametersTable" class="JTable">
+<style>
+<property  name="visible">true</property>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+</style>
+</part>
+</part>
+
+<part id="15ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">300,225,80,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="15Cancel" class="JButton">
+<style>
+<property  name="text">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="15formTypeParameters" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="About" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">About</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="layout">null</property>
+<property  name="bounds">20,20,325,192</property>
+</style>
+<part id="labelIcon" class="JLabel">
+<style>
+<property  name="bounds">146,20,32,32</property>
+<property  name="icon">D:\IISCase\IISCaseApp\IISCase7/icons/iist-big.gif</property>
+</style>
+</part>
+<part id="labelAbout" class="JLabel">
+<style>
+<property  name="bounds">0,60,325,16</property>
+<property  name="text">The application is generated by</property>
+<property  name="horizontalAlignment">CENTER</property>
+</style>
+</part>
+<part id="labelAbout" class="JLabel">
+<style>
+<property  name="bounds">0,81,325,16</property>
+<property  name="text">IIS*CASE Integrated Information Systems Case tool Version 7.0.0</property>
+<property  name="horizontalAlignment">CENTER</property>
+</style>
+</part>
+<part id="buttonAbout" class="JButton">
+<style>
+<property  name="text">Close</property>
+<property  name="bounds">127,112,70,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="About" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+</structure>
+<style>
+<property part-class="JFrame"  name="defaultCloseOperation">2</property>
+<property part-class="JFrame"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JInternalFrame"  name="layout">null</property>
+<property part-class="JInternalFrame"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JInternalFrame"  name="background">e4e4e4</property>
+<property part-class="JInternalFrame"  name="foreground">003399</property>
+<property part-class="JDialog"  name="layout">null</property>
+<property part-class="JDialog"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JDialog"  name="background">e4e4e4</property>
+<property part-class="JDialog"  name="foreground">003399</property>
+<property part-class="JMenu"  name="background">ffffff</property>
+<property part-class="JMenu"  name="foreground">000066</property>
+<property part-class="JMenu"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JMenuBar"  name="background">ffffff</property>
+<property part-class="JMenuBar"  name="foreground">000066</property>
+<property part-class="JMenuItem"  name="background">ffffff</property>
+<property part-class="JMenuItem"  name="foreground">000066</property>
+<property part-class="JMenuItem"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JTabbedPane"  name="background">e4e4e4</property>
+<property part-class="JTabbedPane"  name="foreground">003399</property>
+<property part-class="JTabbedPane"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JPanel"  name="background">e4e4e4</property>
+<property part-class="JPanel"  name="foreground">003399</property>
+<property part-class="JPanel"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JButton"  name="background">ffffff</property>
+<property part-class="JButton"  name="foreground">000066</property>
+<property part-class="JButton"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JButton"  name="contentAreaFilled">false</property>
+<property part-class="JButton"  name="opaque">true</property>
+<property part-class="JButton"  name="border">LineBorder,000066,1</property>
+<property part-class="JButton"  name="preferredSize">75,30</property>
+<property part-class="JLabel"  name="opaque">false</property>
+<property part-class="JLabel"  name="font">SansSerif.bold-bold-11</property>
+<property part-class="JTextField"  name="border">EtchedBorder</property>
+<property part-class="JTextField"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JTextField"  name="background">ffffff</property>
+<property part-class="JTextField"  name="foreground">003399</property>
+<property part-class="JTextArea"  name="border">EtchedBorder</property>
+<property part-class="JTextArea"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JTextArea"  name="background">ffffff</property>
+<property part-class="JTextArea"  name="foreground">003399</property>
+<property part-class="JRadioButton"  name="border">EmptyBorder,0,0,0,0</property>
+<property part-class="JRadioButton"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JCheckBox"  name="border">EmptyBorder,0,0,0,0</property>
+<property part-class="JCheckBox"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JComboBox"  name="border">EtchedBorder</property>
+<property part-class="JComboBox"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JComboBox"  name="background">ffffff</property>
+<property part-class="JComboBox"  name="foreground">003399</property>
+<property part-class="JList"  name="border">EtchedBorder</property>
+<property part-class="JList"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JList"  name="background">ffffff</property>
+<property part-class="JList"  name="foreground">003399</property>
+<property part-class="JTable"  name="background">ffffff</property>
+<property part-class="JTable"  name="foreground">003399</property>
+<property part-class="JTable"  name="font">Courier New Bold-bold-11</property>
+<property part-class="JTable"  name="intercellSpacing">0,0</property>
+<property part-class="JTable"  name="rowHeight">16</property>
+<property part-class="JTable"  name="border">BevelBorder,raised</property>
+<property part-class="DataTable"  name="foreground">003399</property>
+<property part-class="DataTable"  name="font">Courier New Bold-bold-11</property>
+<property part-class="DataTable"  name="intercellSpacing">0,0</property>
+<property part-class="DataTable"  name="rowHeight">16</property>
+<property part-class="DataTable"  name="border">BevelBorder,raised</property>
+</style>
+</interface>
+<peers>
+<logic>
+<d-component id="MainFrame" name="MainFrame" maps-to="ui.UIFrame">
+<d-method id="Close" maps-to="closeFrame">
+</d-method>
+</d-component>
+</logic>
+<presentation base="Java_1.5_Harmonia_1.0" how="union" export="optional">
+<d-class id="DataTable" used-in-tag="part" maps-type="class" maps-to="ui.DBTable" how="replace" export="optional">
+<d-property id="preferredScrollableViewportSize" maps-type="setMethod" maps-to="setPreferredScrollableViewportSize"><d-param type="java.awt.Dimension"/></d-property><d-property id="visible" maps-type="setMethod" maps-to="setVisible">
+<d-param type="boolean"/>
+</d-property><d-property id="LoV" maps-type="setMethod" maps-to="setL0Vs">
+<d-param type="int"/>
+</d-property><d-property id="caller" maps-type="setMethod" maps-to="setCaller">
+<d-param type="int"/>
+</d-property><d-property id="setSearch" maps-type="setMethod" maps-to="setSearchData">
+<d-param type="int"/>
+</d-property><d-property id="setSearchChoice" maps-type="setMethod" maps-to="setSearchChoiceData">
+<d-param type="int"/>
+</d-property><d-property id="setMasiveDelete" maps-type="setMethod" maps-to="setMasiveDelete">
+<d-param type="int"/>
+</d-property><d-property id="reset" maps-type="setMethod" maps-to="resetData">
+<d-param type="int"/>
+</d-property><d-property id="resetL" maps-type="setMethod" maps-to="resData">
+<d-param type="int"/>
+</d-property><d-property id="setAction" maps-type="setMethod" maps-to="setAction">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="url" maps-type="setMethod" maps-to="setUrl">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="comp" maps-type="setMethod" maps-to="setComp">
+<d-param type="int"/>
+</d-property><d-property id="pr" maps-type="setMethod" maps-to="setPR">
+<d-param type="int"/>
+</d-property><d-property id="as" maps-type="setMethod" maps-to="setAS">
+<d-param type="int"/>
+</d-property><d-property id="username" maps-type="setMethod" maps-to="setUsername">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="password" maps-type="setMethod" maps-to="setPassword">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="border" maps-type="setMethod" maps-to="setBorder" post-child="false" export="optional">
+<d-param type="javax.swing.border.Border" />
+</d-property><d-property return-type="" id="selectionBackground" maps-type="setMethod" maps-to="setSelectionBackground">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property return-type="" id="selectionForeground" maps-type="setMethod" maps-to="setSelectionForeground">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property id="rowHeight" maps-type="setMethod" maps-to="setRowHeight">
+<d-param type="int"/>
+</d-property><d-property id="intercellSpacing" maps-type="setMethod" maps-to="setIntercellSpacing">
+<d-param type="java.awt.Dimension"/>
+</d-property><d-property id="font" maps-type="setMethod" maps-to="setFont">
+<d-param type="java.awt.Font"/>
+</d-property><d-property return-type="" id="background" maps-type="setMethod" maps-to="setBackground">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property return-type="" id="foreground" maps-type="setMethod" maps-to="setForeground">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property return-type="" id="gridColor" maps-type="setMethod" maps-to="setGridColor">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property id="autoCreateColumnsFromModel" maps-type="setMethod" maps-to="setAutoCreateColumnsFromModel"><d-param type="boolean"/> </d-property><d-property id="autoResizeMode" maps-type="setMethod" maps-to="setAutoResizeMode">
+<d-param type="int"/>
+</d-property><d-property id="selectionMode" maps-type="setMethod" maps-to="setSelectionMode">
+<d-param type="int"/>
+</d-property></d-class>
+<d-class id="DataPanel" used-in-tag="part" maps-type="class" maps-to="ui.DBPanel" how="replace" export="optional">
+<d-property id="addToContainer" maps-type="method" maps-to="add"/><d-property id="visible" maps-type="setMethod" maps-to="setVisible">
+<d-param type="boolean"/>
+</d-property><d-property id="opaque" maps-type="setMethod" maps-to="setOpaque">
+<d-param type="boolean"/>
+</d-property><d-property id="LoV" maps-type="setMethod" maps-to="setL0Vs">
+<d-param type="int"/>
+</d-property><d-property id="caller" maps-type="setMethod" maps-to="setCaller">
+<d-param type="int"/>
+</d-property><d-property id="setSearch" maps-type="setMethod" maps-to="setSearchData">
+<d-param type="int"/>
+</d-property><d-property id="setSearchChoice" maps-type="setMethod" maps-to="setSearchChoiceData">
+<d-param type="int"/>
+</d-property><d-property id="setMasiveDelete" maps-type="setMethod" maps-to="setMasiveDelete">
+<d-param type="int"/>
+</d-property><d-property id="reset" maps-type="setMethod" maps-to="resetData">
+<d-param type="int"/>
+</d-property><d-property id="resetL" maps-type="setMethod" maps-to="resData">
+<d-param type="int"/>
+</d-property><d-property id="setAction" maps-type="setMethod" maps-to="setAction">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="url" maps-type="setMethod" maps-to="setUrl">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="comp" maps-type="setMethod" maps-to="setComp">
+<d-param type="int"/>
+</d-property><d-property id="pr" maps-type="setMethod" maps-to="setPR">
+<d-param type="int"/>
+</d-property><d-property id="as" maps-type="setMethod" maps-to="setAS">
+<d-param type="int"/>
+</d-property><d-property id="username" maps-type="setMethod" maps-to="setUsername">
+<d-param type="java.lang.String"/>
+</d-property><d-property id="password" maps-type="setMethod" maps-to="setPassword">
+<d-param type="java.lang.String"/>
+</d-property><d-property return-type="" id="background" maps-type="setMethod" maps-to="setBackground">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property return-type="" id="foreground" maps-type="setMethod" maps-to="setForeground">
+<d-param id="" type="java.awt.Color"/></d-property>
+<d-property return-type="" id="font" maps-type="setMethod" maps-to="setFont">
+<d-param id="" type="java.awt.Font"/></d-property>
+<d-property return-type="" id="border" maps-type="setMethod" maps-to="setBorder">
+<d-param id="" type="javax.swing.border.Border"/></d-property>
+<d-property id="preferredSize" maps-type="setMethod" maps-to="setPreferredSize"><d-param type="java.awt.Dimension"/></d-property>
+<d-property id="bounds" maps-type="setMethod" maps-to="setBounds">
+<d-param type="java.awt.Rectangle"/>
+</d-property><d-property id="layout" maps-type="setMethod" maps-to="setLayout"><d-param type="java.awt.LayoutManager"/></d-property></d-class>
+</presentation></peers>
+</uiml>

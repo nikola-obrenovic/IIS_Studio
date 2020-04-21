@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+          <xs:element name="behaviour">
+                    <xs:complexType>
+                              <xs:attribute name="query_allowed" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="insert_allowed" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="delete_allowed" use="optional">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="nullify_allowed" use="optional">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="update_allowed" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="component_type">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="component_type" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element ref="behaviour"/>
+                                        <xs:element ref="ct_attribute" maxOccurs="unbounded"/>
+                                        <xs:element ref="key" maxOccurs="unbounded"/>
+                                        <xs:element ref="unique" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element ref="check_constraint" minOccurs="0"/>
+                              </xs:sequence>
+                              <xs:attribute name="name" use="required" type="xs:string"/>
+                              <xs:attribute name="title" use="required" type="xs:string"/>
+                              <xs:attribute name="mandatory" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="ct_attribute">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="behaviour"/>
+                                        <xs:element ref="function" minOccurs="0"/>
+                              </xs:sequence>
+                              <xs:attribute name="name" use="required" type="xs:string"/>
+                              <xs:attribute name="title" use="required" type="xs:string"/>
+                              <xs:attribute name="mandatory" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                             <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="default" use="optional" type="xs:string"/>
+                              <xs:attribute name="attribute_behaviour" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="modifiable"/>
+                                                            <xs:enumeration value="query_only"/>
+                                                            <xs:enumeration value="display_only"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="attribute_no" use="optional" type="xs:integer"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="key">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="ct_attribute" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                              <xs:attribute name="key_no" use="required" type="xs:integer"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="unique">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="ct_attribute" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                              <xs:attribute name="unique_no" use="required" type="xs:integer"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="check_constraint" type="xs:string"/>
+          <xs:element  name="attribute">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="domain" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element ref="renamed" minOccurs="0"/>
+                                        <xs:element ref="derived" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                              <xs:attribute name="name" use="required" type="xs:string"/>
+                              <xs:attribute name="description" use="required" type="xs:string"/>
+                              <xs:attribute name="expression" use="optional" type="xs:string"/>
+                              <xs:attribute name="query_function" use="optional" type="xs:string"/>
+                              <xs:attribute name="exists_in_DB" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="derived" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="yes"/>
+                                                            <xs:enumeration value="no"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="default" use="optional" type="xs:string"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="domain">
+                    <xs:complexType>
+                              <xs:choice>
+                                        <xs:element ref="user_defined_domain"/>
+                              </xs:choice>
+                              <xs:attribute name="name" use="required" type="xs:string"/>
+                              <xs:attribute name="description" use="required" type="xs:string"/>
+                              <xs:attribute name="default" use="optional" type="xs:string"/>
+                              <xs:attribute name="expression" use="optional" type="xs:string"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="primitive_domain">
+                    <xs:complexType>
+                              <xs:complexContent>
+                                        <xs:restriction base="xs:anyType">
+                                                  <xs:attribute name="type" type="xs:string"/>
+                                        </xs:restriction>
+                              </xs:complexContent>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="user_defined_domain">
+                    <xs:complexType>
+                              <xs:choice>
+                                        <xs:element ref="inheritance_domain"/>
+                                        <xs:element ref="complex_domain"/>
+                              </xs:choice>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="inheritance_domain">
+                    <xs:complexType>
+                              <xs:complexContent>
+                                        <xs:restriction base="xs:anyType">
+                                                  <xs:attribute name="from" use="required">
+                                                            <xs:simpleType>
+                                                                      <xs:restriction base="xs:NMTOKEN">
+                                                                                <xs:enumeration value="primitive"/>
+                                                                                <xs:enumeration value="user_defined"/>
+                                                                      </xs:restriction>
+                                                            </xs:simpleType>
+                                                  </xs:attribute>
+                                                  <xs:attribute name="parent" type="xs:string"/>
+                                                  <xs:attribute name="length" use="optional" type="xs:integer"/>
+                                                  <xs:attribute name="decimal_places" use="optional" type="xs:integer"/>
+                                        </xs:restriction>
+                              </xs:complexContent>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="complex_domain">
+                    <xs:complexType>
+                              <xs:choice>
+                                        <xs:element ref="tuple_domain"/>
+                                        <xs:element ref="choice_domain"/>
+                                        <xs:element ref="set_domain"/>
+                              </xs:choice>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="tuple_domain">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="attrib" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="choice_domain">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="attrib" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="set_domain">
+                    <xs:complexType>
+                              <xs:complexContent>
+                                        <xs:restriction base="xs:anyType">
+                                                  <xs:attribute name="member_type" use="required">
+                                                            <xs:simpleType>
+                                                                      <xs:restriction base="xs:NMTOKEN">
+                                                                                <xs:enumeration value="primitive"/>
+                                                                                <xs:enumeration value="user_defined"/>
+                                                                      </xs:restriction>
+                                                            </xs:simpleType>
+                                                  </xs:attribute>
+                                                  <xs:attribute name="member_name" use="required" type="xs:string"/>
+                                        </xs:restriction>
+                              </xs:complexContent>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="function">
+                    <xs:complexType>
+                              <xs:complexContent>
+                                        <xs:restriction base="xs:anyType">
+                                                  <xs:attribute name="name" use="required" type="xs:string"/>
+                                                  <xs:attribute name="description" use="required" type="xs:string"/>
+                                        </xs:restriction>
+                              </xs:complexContent>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="renamed">
+                    <xs:complexType>
+                              <xs:complexContent>
+                                        <xs:restriction base="xs:anyType">
+                                                  <xs:attribute name="from_attribute" use="required" type="xs:string"/>
+                                        </xs:restriction>
+                              </xs:complexContent>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="attrib">
+                    <xs:complexType>
+                              <xs:complexContent>
+                                        <xs:restriction base="xs:anyType">
+                                                  <xs:attribute name="name" use="required" type="xs:string"/>
+                                        </xs:restriction>
+                              </xs:complexContent>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="derived">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="mode" minOccurs="1" />
+                              </xs:sequence>
+                              <xs:attribute name="from_attribute" use="required" type="xs:string"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="mode">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="function" minOccurs="1" />
+                              </xs:sequence>
+                              <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="update"/>
+                                                            <xs:enumeration value="insert"/>
+                                                            <xs:enumeration value="delete"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="form_type">
+                    <xs:complexType mixed="true">
+                              <xs:sequence>
+                                        <xs:element ref="component_type" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                              <xs:attribute name="name" use="required" type="xs:string"/>
+                              <xs:attribute name="title" use="required" type="xs:string"/>
+                              <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="MENU"/>
+                                                            <xs:enumeration value="NOT_CONSIDERED_IN_DB_DESIGN"/>
+                                                            <xs:enumeration value="CONSIDERED_IN_DB_DESIGN"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="frequency" use="required" type="xs:string"/>
+                              <xs:attribute name="frequency_unit" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="min."/>
+                                                            <xs:enumeration value="sec."/>
+                                                            <xs:enumeration value="hour"/>
+                                                            <xs:enumeration value="day"/>
+                                                            <xs:enumeration value="week"/>
+                                                            <xs:enumeration value="month"/>
+                                                            <xs:enumeration value="year"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="response" use="required" type="xs:string"/>
+                              <xs:attribute name="response_unit" use="required">
+                                        <xs:simpleType>
+                                                  <xs:restriction base="xs:NMTOKEN">
+                                                            <xs:enumeration value="min."/>
+                                                            <xs:enumeration value="sec."/>
+                                                            <xs:enumeration value="hour"/>
+                                                            <xs:enumeration value="day"/>
+                                                            <xs:enumeration value="week"/>
+                                                            <xs:enumeration value="month"/>
+                                                            <xs:enumeration value="year"/>
+                                                  </xs:restriction>
+                                        </xs:simpleType>
+                              </xs:attribute>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="child_app_systems">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="app_system_spec" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="form_types">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="owned_form_types" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="referenced_form_types" minOccurs="1" maxOccurs="1" />
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="referenced_form_types">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="form_type" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="owned_form_types">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="form_type" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="application_system">
+                    <xs:complexType mixed="true">
+                              <xs:sequence>
+                                        <xs:element ref="child_app_systems" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element ref="form_types" minOccurs="1" maxOccurs="1"/>
+                              </xs:sequence>
+                              <xs:attribute name="name" use="required" type="xs:string"/>
+                              <xs:attribute name="description" use="required" type="xs:string"/>
+                              <xs:attribute name="type" use="required"/>
+                    </xs:complexType>
+          </xs:element>
+          <xs:element name="app_system_spec">
+                    <xs:complexType>
+                              <xs:sequence>
+                                        <xs:element ref="application_system" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element ref="attribute" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+</xs:schema>

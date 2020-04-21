@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<IISBiltInFunc>
+<Math>
+	<Abs Code="0">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Abs>
+        <Acos Code="36">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Acos>
+        <Asin Code="37">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Asin>
+        <Atan Code="38">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Atan>
+        <Cos Code="22">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Cos>
+        <Cosh Code="32">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Cosh>        
+        <Floor Code="24">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Floor>
+        <Log Code="25">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Log>
+        <Max Code="26">
+		<PARAMS>
+			<NUM1>
+				<REAL/>
+			</NUM1>
+                        <NUM2>
+				<REAL/>
+			</NUM2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Max>
+        <Min Code="27">
+		<PARAMS>
+			<NUM1>
+				<REAL/>
+			</NUM1>
+                        <NUM2>
+				<REAL/>
+			</NUM2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Min>
+        <Pow Code="28">
+		<PARAMS>
+			<NUM1>
+				<REAL/>
+			</NUM1>
+                        <NUM2>
+				<REAL/>
+			</NUM2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Pow>
+        <Random Code="29">
+		<PARAMS>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Random>
+        <Round Code="30">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Round>
+        <Sin Code="23">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Sin>
+        <Sinh Code="31">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Sinh>
+        <Sqrt Code="33">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Sqrt>
+        <Tan Code="34">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Tan>
+        <Tanh Code="35">
+		<PARAMS>
+			<NUM>
+				<REAL/>
+			</NUM>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Tanh>
+</Math>
+<String>
+        <EndsWith Code="40">
+		<PARAMS>
+			<STR1>
+				<STRING/>
+			</STR1>
+			<STR2>
+				<STRING/>
+			</STR2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<BOOLEAN/>
+		</RETURN_TYPE>
+	</EndsWith>
+        <IndexOf Code="41">
+		<PARAMS>
+			<STR1>
+				<STRING/>
+			</STR1>
+			<STR2>
+				<STRING/>
+			</STR2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</IndexOf>
+        <Len Code="2">
+		<PARAMS>
+			<STR>
+				<STRING/>
+			</STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Len>
+        <LastIndexOf Code="42">
+		<PARAMS>
+			<STR1>
+				<STRING/>
+			</STR1>
+			<STR2>
+				<STRING/>
+			</STR2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</LastIndexOf>
+        <StartsWith Code="39">
+		<PARAMS>
+			<STR1>
+				<STRING/>
+			</STR1>
+			<STR2>
+				<STRING/>
+			</STR2>
+		</PARAMS>
+		<RETURN_TYPE>
+			<BOOLEAN/>
+		</RETURN_TYPE>
+	</StartsWith>
+	<SubString Code="1">
+		<PARAMS>
+			<STR>
+				<STRING/>
+			</STR>
+			<FROM>
+				<INT/>
+			</FROM>
+			<TO>
+				<INT/>
+			</TO>
+		</PARAMS>
+		<RETURN_TYPE>
+			<STRING/>
+		</RETURN_TYPE>
+	</SubString>
+        <ToLower Code="43">
+		<PARAMS>
+			<STR1>
+				<STRING/>
+			</STR1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<STRING/>
+		</RETURN_TYPE>
+	</ToLower>
+        <ToUpper Code="44">
+		<PARAMS>
+			<STR1>
+				<STRING/>
+			</STR1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<STRING/>
+		</RETURN_TYPE>
+	</ToUpper>
+        <To_String Code="14">
+		<PARAMS>
+			<STR>
+				<GENERIC/>
+			</STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<STRING/>
+		</RETURN_TYPE>
+	</To_String>        
+</String>
+<DateTime>
+	<CurrentTime Code="3">
+		<PARAMS>
+		</PARAMS>
+		<RETURN_TYPE>
+			<TIME/>
+		</RETURN_TYPE>
+	</CurrentTime>
+	<CurrentDate Code="4">
+		<PARAMS>
+		</PARAMS>
+		<RETURN_TYPE>
+			<DATE/>
+		</RETURN_TYPE>
+	</CurrentDate>
+        <Day Code="45">
+		<PARAMS>
+                    <DATE1>
+                        <DATE/>
+                    </DATE1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Day>
+        <Month Code="46">
+		<PARAMS>
+                    <DATE1>
+                        <DATE/>
+                    </DATE1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Month>
+        <Year Code="47">
+		<PARAMS>
+                    <DATE1>
+                        <DATE/>
+                    </DATE1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Year>
+        <Hour Code="48">
+		<PARAMS>
+                    <TIME1>
+                        <TIME/>
+                    </TIME1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Hour>
+        <Minute Code="49">
+		<PARAMS>
+                    <TIME1>
+                        <TIME/>
+                    </TIME1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Minute>
+        <Second Code="50">
+		<PARAMS>
+                    <TIME1>
+                        <TIME/>
+                    </TIME1>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Second>
+</DateTime>
+<SQL>
+	<Execute_Query Code="5">
+		<PARAMS>
+                    <STR>
+                        <STRING/>
+                    </STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<ITERATOR/>
+		</RETURN_TYPE>
+	</Execute_Query>
+        <Execute_NonQuery Code="7">
+		<PARAMS>
+                    <STR>
+                        <STRING/>
+                    </STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Execute_NonQuery>
+        <HasNext Code="6">
+		<PARAMS>
+                    <STR>
+                        <ITERATOR/>
+                    </STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<BOOL/>
+		</RETURN_TYPE>
+	</HasNext>
+        <!--<Previous Code="7">
+		<PARAMS>
+                    <STR>
+                        <ITERATOR/>
+                    </STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<BOOL/>
+		</RETURN_TYPE>
+	</Previous>
+        <Get_String Code="8">
+		<PARAMS>
+                    <ITER>
+                        <ITERATOR/>
+                    </ITER>
+                    <NAME>
+                        <STRING/>
+                    </NAME>
+		</PARAMS>
+		<RETURN_TYPE>
+			<STRING/>
+		</RETURN_TYPE>
+	</Get_String>
+        <Get_Int Code="9">
+		<PARAMS>
+                    <ITER>
+                        <ITERATOR/>
+                    </ITER>
+                    <NAME>
+                        <STRING/>
+                    </NAME>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Get_Int>
+        <Get_Boolean Code="10">
+		<PARAMS>
+                    <ITER>
+                        <ITERATOR/>
+                    </ITER>
+                    <NAME>
+                        <STRING/>
+                    </NAME>
+		</PARAMS>
+		<RETURN_TYPE>
+			<BOOL/>
+		</RETURN_TYPE>
+	</Get_Boolean>
+        <Get_Number Code="11">
+		<PARAMS>
+                    <ITER>
+                        <ITERATOR/>
+                    </ITER>
+                    <NAME>
+                        <STRING/>
+                    </NAME>
+		</PARAMS>
+		<RETURN_TYPE>
+			<REAL/>
+		</RETURN_TYPE>
+	</Get_Number>
+        <Get_Time Code="12">
+		<PARAMS>
+                    <ITER>
+                        <ITERATOR/>
+                    </ITER>
+                    <NAME>
+                        <STRING/>
+                    </NAME>
+		</PARAMS>
+		<RETURN_TYPE>
+			<TIME/>
+		</RETURN_TYPE>
+	</Get_Time>
+        <Get_Date Code="13">
+		<PARAMS>
+                    <ITER>
+                        <ITERATOR/>
+                    </ITER>
+                    <NAME>
+                        <STRING/>
+                    </NAME>
+		</PARAMS>
+		<RETURN_TYPE>
+			<DATE/>
+		</RETURN_TYPE>
+	</Get_Date>-->
+</SQL>
+<SET>
+	<Get_Size Code="15">
+		<PARAMS>
+                    <STR>
+                        <GENERIC_SET/>
+                    </STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Get_Size>
+        <Get_Item Code="16">
+		<PARAMS>
+                    <STR>
+                        <INT/>
+                    </STR>
+                    <STR>
+                        <GENERIC_SET/>
+                    </STR>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</Get_Item>
+ </SET>    
+ <MESSAGE>
+	<ShowInfoMessage Code="17">
+		<PARAMS>
+                    <MSG>
+                        <STRING/>
+                    </MSG>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</ShowInfoMessage>
+        <ShowWarningMessage Code="18">
+		<PARAMS>
+                    <MSG>
+                        <STRING/>
+                    </MSG>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</ShowWarningMessage>
+        <ShowErrorMessage Code="19">
+		<PARAMS>
+                    <MSG>
+                        <STRING/>
+                    </MSG>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</ShowErrorMessage>
+        <ShowYesNoMessage Code="20">
+		<PARAMS>
+                    <MSG>
+                        <STRING/>
+                    </MSG>
+		</PARAMS>
+		<RETURN_TYPE>
+			<INT/>
+		</RETURN_TYPE>
+	</ShowYesNoMessage>
+        <ShowInputMessage Code="21">
+		<PARAMS>
+                    <MSG>
+                        <STRING/>
+                    </MSG>
+		</PARAMS>
+		<RETURN_TYPE>
+			<STRING/>
+		</RETURN_TYPE>
+	</ShowInputMessage>
+ </MESSAGE>       
+</IISBiltInFunc>
