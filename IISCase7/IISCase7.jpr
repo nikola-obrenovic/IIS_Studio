@@ -284,6 +284,44 @@
          </hash>
       </list>
       <hash n="internalDefinitions">
+         <list n="jdkDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/resources.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/rt.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/sunrsasign.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/jsse.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/jce.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/charsets.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/jfr.jar!/"/>
+                  <url protocol="file" path="/C:/Program Files/Java/jdk1.7.0_80/jre/classes/"/>
+               </list>
+               <value n="description" v="1.7.0_80"/>
+               <list n="docPath">
+                  <url protocol="http" host="docs.oracle.com" path="/javase/7/docs/api/"/>
+               </list>
+               <list n="expandedClassPath">
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/resources.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/rt.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/sunrsasign.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/jsse.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/jce.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/charsets.jar!/"/>
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/jre/lib/jfr.jar!/"/>
+                  <url protocol="file" path="/C:/Program Files/Java/jdk1.7.0_80/jre/classes/"/>
+               </list>
+               <list n="expandedSourcePath">
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/src.zip!/"/>
+               </list>
+               <value n="id" v="1.7.0_80"/>
+               <url n="javaExecutable" protocol="file" path="/C:/Program Files/Java/jdk1.7.0_80/bin/java.exe"/>
+               <url n="sdkBinDir" protocol="file" path="/C:/Program Files/Java/jdk1.7.0_80/bin/"/>
+               <list n="sourcePath">
+                  <url protocol="jar" path="file:/C:/Program Files/Java/jdk1.7.0_80/src.zip!/"/>
+               </list>
+               <value n="version" v="1.7.0_80"/>
+            </hash>
+         </list>
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
@@ -486,7 +524,7 @@
          </list>
       </hash>
       <hash n="jdkReference">
-         <url n="id" protocol="file" path="/C:/Users/obrenovic/AppData/Roaming/JDeveloper/system12.2.1.2.42.170105.1224/o.jdeveloper/1.7.0_80.jdk"/>
+         <value n="id" v="1.7.0_80"/>
          <value n="isJDK" v="true"/>
          <value n="jdkVersion" v="1.7.0_80"/>
       </hash>

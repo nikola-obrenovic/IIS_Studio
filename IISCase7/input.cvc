@@ -1,4 +1,6 @@
-A : INT;
+MajEmpNum : REAL;
+FacId : REAL;
+FacEmpNum : REAL;
 
-ASSERT (A>2);
-QUERY (A/=1);
+ASSERT (FacEmpNum>MajEmpNum);
+QUERY (FacId=100);

@@ -1,6 +1,8 @@
-(declare-fun A () Int)
+(declare-fun MajEmpNum () Real)
+(declare-fun FacId () Real)
+(declare-fun FacEmpNum () Real)
 
-(assert (> A 2))
-(assert (not ( distinct  A 1)))
+(assert (> FacEmpNum MajEmpNum))
+(assert (not (= FacId 100)))
 
 (check-sat)
