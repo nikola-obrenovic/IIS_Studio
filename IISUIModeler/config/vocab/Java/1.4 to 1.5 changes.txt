@@ -1,0 +1,27 @@
+AWT:
+----
+added Frame field "alwaysOnTop"
+added Dialog field "alwaysOnTop"
+added Frame field "locationByPlatform"
+added Dialog field "locationByPlatform"
+
+SWING:
+------
+added JComponent field "inheritsPopupMenu"
+added JFrame field "alwaysOnTop"
+added JDialog field "alwaysOnTop"
+added JFrame field "locationByPlatform"
+added JDialog field "locationByPlatform"
+
+******************************************************************
+IGNORED
+
+AWT:
+----
+added Component ancestor field "mousePosition"
+
+SWING:
+------
+added JTable method "print"
+added JTable field "printable"
+

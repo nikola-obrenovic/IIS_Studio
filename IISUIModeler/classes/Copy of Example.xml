@@ -1,0 +1,3580 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<uiml>
+<interface id="IISUIModeler">
+<structure>
+<part id="MainFrame" class="JFrame">
+<style>
+<property  name="bounds">0,0,1680,1050</property>
+<property  name="title">Application System</property>
+<property  name="iconImage">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="resizable">true</property>
+</style>
+
+<part id="mainMenubar" class="JMenuBar">
+<part id="mainFile" class="JMenu">
+<style>
+<property  name="text">File</property>
+<property  name="mnemonic">70</property>
+</style>
+<part id="mainClose" class="JMenuItem">
+<style>
+<property  name="text">Close</property>
+<property  name="mnemonic">67</property>
+</style>
+</part>
+<part id="mainSeparate" class="JSeparator"/>
+<part id="mainQuit" class="JMenuItem">
+<style>
+<property  name="text">Quit</property>
+<property  name="mnemonic">81</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="MainFrame" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="ApplicationformTypeMenuBar" class="JMenu">
+<style>
+<property  name="text">Application</property>
+<property  name="mnemonic">65</property>
+<property  name="background">ece9d8</property>
+<property  name="foreground">000000</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+<part id="subMenu" class="JMenu">
+<style>
+<property  name="text">Submenu</property>
+<property  name="mnemonic">83</property>
+</style>
+<part id="subMenuItem" class="JMenuItem">
+<style>
+<property  name="text">Submenu Item 1</property>
+<property  name="mnemonic">48</property>
+<property  name="enabled">false</property>
+</style>
+</part>
+<part id="subMenuItem" class="JMenuItem">
+<style>
+<property  name="text">Submenu Item 2</property>
+<property  name="mnemonic">49</property>
+<property  name="enabled">false</property>
+</style>
+</part>
+</part>
+<part id="1formTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Form Type Table</property>
+<property  name="mnemonic">70</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1compType" name="visible">true</property>
+<property  part-name="1compType" name="selected">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="2formTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Form Type Nested Item Groups</property>
+<property  name="mnemonic">78</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="2compType" name="visible">true</property>
+<property  part-name="2compType" name="selected">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="3formTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Form Type 3 Item Groups</property>
+<property  name="mnemonic">51</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="3compType" name="visible">true</property>
+<property  part-name="3compType" name="selected">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="4formTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Form Type Input Fields</property>
+<property  name="mnemonic">73</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compType" name="visible">true</property>
+<property  part-name="4compType" name="selected">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="5formTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Form Type New Window Subcomponents</property>
+<property  name="mnemonic">84</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="5compType" name="visible">true</property>
+<property  part-name="5compType" name="selected">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="6formTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Form Type Master-Detail</property>
+<property  name="mnemonic">68</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="6compType" name="visible">true</property>
+<property  part-name="6compType" name="selected">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="mainHelp" class="JMenu">
+<style>
+<property  name="text">Help</property>
+<property  name="mnemonic">72</property>
+</style>
+<part id="mainAbout" class="JMenuItem">
+<style>
+<property  name="text">About</property>
+<property  name="mnemonic">65</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="About" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="dtp" class="JDesktopPane">
+<style>
+<property  name="background">004e98</property>
+</style>
+<part id="1compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Table</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">20,20,460,483</property>
+</style>
+<part id="1Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,400,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type</property>
+</style>
+</part>
+<part id="1Search" class="JPanel">
+<style>
+<property  name="bounds">25,29,400,45</property>
+<property  name="border">EtchedBorder</property>
+<property  name="background">ece9d8</property>
+</style>
+<part id="1SearchItemCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="content"><constant model="list">
+<constant value="Item 1"/>
+<constant value="Item 2"/>
+<constant value="Item 4"/>
+</constant>
+</property>
+<property  part-name="1SearchItemCombo" name="selectedIndex">0</property>
+<property  name="toolTipText">Search by item</property>
+</style>
+</part>
+<part id="1SearchCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">40,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="1SearchCombo" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="1SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="1Filter" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/filter.gif</property>
+<property  name="toolTipText">Filter</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1compTypeSearch" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="1Reset" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/refresh.gif</property>
+<property  name="toolTipText">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1SearchItemCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1SearchCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1SearchKey" name="text"></property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="1TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">25,84,400,179</property>
+</style>
+<part id="1Table" class="JTable">
+<style>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="columnNames">
+<constant model="list">
+<constant value="Item 1"/>
+<constant value="Item 2"/>
+</constant>
+</property>
+<property  name="content">
+<constant model="table.rowMajor">
+<constant>
+<constant value="Item 1 Value 11"/>
+<constant value="Item 2 Value 21"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 12"/>
+<constant value="Item 2 Value 22"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 13"/>
+<constant value="Item 2 Value 23"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 14"/>
+<constant value="Item 2 Value 24"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 15"/>
+<constant value="Item 2 Value 25"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 16"/>
+<constant value="Item 2 Value 26"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 17"/>
+<constant value="Item 2 Value 27"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 18"/>
+<constant value="Item 2 Value 28"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 19"/>
+<constant value="Item 2 Value 29"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 110"/>
+<constant value="Item 2 Value 210"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 111"/>
+<constant value="Item 2 Value 211"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 112"/>
+<constant value="Item 2 Value 212"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 113"/>
+<constant value="Item 2 Value 213"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 114"/>
+<constant value="Item 2 Value 214"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 115"/>
+<constant value="Item 2 Value 215"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 116"/>
+<constant value="Item 2 Value 216"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 117"/>
+<constant value="Item 2 Value 217"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 118"/>
+<constant value="Item 2 Value 218"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 119"/>
+<constant value="Item 2 Value 219"/>
+</constant>
+<constant>
+<constant value="Item 1 Value 120"/>
+<constant value="Item 2 Value 220"/>
+</constant>
+</constant>
+</property>
+</style>
+</part>
+</part>
+<part id="1OverflowScroll" class="JScrollPane">
+<style>
+<property  name="bounds">25,263,400,100</property>
+</style>
+<part id="21itemGroup" class="JPanel">
+<style>
+<property  name="bounds">0,0,211,60</property>
+<property  name="preferredSize">211,60</property>
+<property  name="name">Item Group 2</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="41InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 4</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="41InputFieldScrollPane" class="JScrollPane">
+<style>
+<property  name="border">EtchedBorder</property>
+</style>
+<part id="41InputField" class="JTextArea">
+<style>
+<property  name="text">Item 4 Value</property>
+<property  name="editable">false</property>
+<property  name="text">Item 4 Value</property>
+</style>
+</part>
+<style>
+<property  name="bounds">71,10,150,60</property>
+</style>
+</part>
+</part>
+</part>
+<part id="1NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">5,368,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="1PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="1Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="1NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="1LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="1ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">5,403,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="1DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="1ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="1OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="1Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="2compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Nested Item Groups</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">20,20,567,419</property>
+</style>
+<part id="2Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,507,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type</property>
+</style>
+</part>
+<part id="2Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,507,260</property>
+<property  name="layout">null</property>
+</style>
+<part id="12itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,487,140</property>
+<property  name="preferredSize">487,140</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 1</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="12nestedItemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,266,120</property>
+<property  name="border">TitledBorder,Nested Item Group 1</property>
+<property  name="name">Nested Item Group 1</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="42InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,20,77,11</property>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="text">Item 4</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="42InputFieldScrollPane" class="JScrollPane">
+<style>
+<property  name="border">EtchedBorder</property>
+</style>
+<part id="42InputField" class="JTextArea">
+<style>
+<property  name="text">Item 4 Value</property>
+<property  name="text">Item 4 Value</property>
+</style>
+</part>
+<style>
+<property  name="bounds">106,20,150,60</property>
+</style>
+</part>
+<part id="52InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,90,77,11</property>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="text">Item 5 long</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="52InputField" class="JCheckBox">
+<style>
+<property  name="opaque">false</property>
+<property  name="bounds">106,85,20,20</property>
+</style>
+</part>
+</part>
+<part id="22nestedItemGroup" class="JPanel">
+<style>
+<property  name="bounds">286,10,181,50</property>
+<property  name="border">TitledBorder,Nested Item Group 2</property>
+<property  name="name">Nested Item Group 2</property>
+<property  name="opaque">false</property>
+<property  name="layout">null</property>
+</style>
+<part id="62InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,20,42,11</property>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="text">Item 6</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="62InputField" class="JComboBox">
+<style>
+<property  name="content"><constant model="list">
+<constant value="Item Value 1"/>
+<constant value="Item Value 2"/>
+<constant value="Item Value 3"/>
+<constant value="Item Value 4"/>
+<constant value="Item Value 5"/>
+<constant value="Item Value 6"/>
+<constant value="Item Value 7"/>
+<constant value="Item Value 8"/>
+<constant value="Item Value 9"/>
+<constant value="Item Value 10"/>
+</constant>
+</property>
+<property  name="selectedIndex">2</property>
+<property  name="editable">false</property>
+<property  name="bounds">71,20,100,20</property>
+</style>
+</part>
+</part>
+</part>
+<part id="22itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,160,487,90</property>
+<property  name="preferredSize">487,90</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 2</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="82InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 8</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="82InputField" class="JCheckBox">
+<style>
+<property  name="opaque">false</property>
+<property  name="bounds">106,5,20,20</property>
+</style>
+</part>
+<part id="92InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,40,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 9 long</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="92InputFieldPane" class="ButtonGroup">
+<part id="92InputField" class="JRadioButton">
+<style>
+<property  name="text">yes</property>
+<property  name="bounds">106,35,40,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+<part id="92InputField" class="JRadioButton">
+<style>
+<property  name="text">no</property>
+<property  name="bounds">106,55,40,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+<part id="2NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">58,304,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="2FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="2PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="2Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="2NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="2LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="2ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">58,339,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="2NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="2compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="2DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="2ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="2OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="2Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="2compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="3compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type 3 Item Groups</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">20,20,480,449</property>
+</style>
+<part id="3Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,420,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type</property>
+</style>
+</part>
+<part id="3Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,420,290</property>
+<property  name="layout">null</property>
+</style>
+<part id="13itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,400,170</property>
+<property  name="preferredSize">400,170</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 1</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="73InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 7</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="73InputFieldScrollPane" class="JScrollPane">
+<style>
+<property  name="border">EtchedBorder</property>
+</style>
+<part id="73InputField" class="JList">
+<style>
+<property  name="content"><constant model="list">
+<constant value="Item Value 1"/>
+<constant value="Item Value 2"/>
+<constant value="Item Value 3"/>
+<constant value="Item Value 4"/>
+<constant value="Item Value 5"/>
+<constant value="Item Value 6"/>
+<constant value="Item Value 7"/>
+<constant value="Item Value 8"/>
+<constant value="Item Value 9"/>
+<constant value="Item Value 10"/>
+</constant>
+</property>
+<property  name="selectedIndex">4</property>
+</style>
+</part>
+<style>
+<property  name="bounds">106,10,100,40</property>
+</style>
+</part>
+<part id="83InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,60,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 8</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="83InputField" class="JCheckBox">
+<style>
+<property  name="opaque">false</property>
+<property  name="bounds">106,55,20,20</property>
+</style>
+</part>
+<part id="93InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,90,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 9 long</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="93InputFieldPane" class="ButtonGroup">
+<part id="93InputField" class="JRadioButton">
+<style>
+<property  name="text">yes</property>
+<property  name="bounds">106,85,40,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+<part id="93InputField" class="JRadioButton">
+<style>
+<property  name="text">no</property>
+<property  name="bounds">106,105,40,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+</part>
+<part id="103InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,140,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 10</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="103InputField" class="JComboBox">
+<style>
+<property  name="content"><constant model="list">
+<constant value="Item Value 1"/>
+<constant value="Item Value 2"/>
+<constant value="Item Value 3"/>
+<constant value="Item Value 4"/>
+<constant value="Item Value 5"/>
+<constant value="Item Value 6"/>
+<constant value="Item Value 7"/>
+<constant value="Item Value 8"/>
+<constant value="Item Value 9"/>
+<constant value="Item Value 10"/>
+</constant>
+</property>
+<property  name="editable">true</property>
+<property  name="bounds">106,140,100,20</property>
+</style>
+</part>
+</part>
+<part id="23itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,190,400,40</property>
+<property  name="preferredSize">400,40</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 2</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="23InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 2</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="23InputField" class="JTextField">
+<style>
+<property  name="text">default value</property>
+<property  name="bounds">71,10,100,20</property>
+</style>
+</part>
+</part>
+<part id="33itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,240,400,40</property>
+<property  name="preferredSize">400,40</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 3</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="13InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 11</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="13InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,10,150,20</property>
+</style>
+</part>
+</part>
+</part>
+<part id="3NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">15,334,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="3FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="3PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="3Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="3NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="3LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="3ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">15,369,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="3NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="3compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="3DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="3ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="3OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="3Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="3compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="4compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Input Fields</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">20,20,566,394</property>
+</style>
+<part id="4Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,506,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type</property>
+</style>
+</part>
+<part id="4Search" class="JPanel">
+<style>
+<property  name="bounds">25,29,506,45</property>
+<property  name="border">EtchedBorder</property>
+<property  name="background">ece9d8</property>
+</style>
+<part id="4SearchItemCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="content"><constant model="list">
+<constant value="Item 11"/>
+<constant value="Item 12"/>
+<constant value="Item 13"/>
+<constant value="Item 14"/>
+<constant value="Item 15"/>
+<constant value="Item 16"/>
+<constant value="Item 17"/>
+<constant value="Item 18"/>
+<constant value="Item 19"/>
+<constant value="Item 20"/>
+</constant>
+</property>
+<property  part-name="4SearchItemCombo" name="selectedIndex">0</property>
+<property  name="toolTipText">Search by item</property>
+</style>
+</part>
+<part id="4SearchCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">40,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="4SearchCombo" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="4SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="4Filter" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/filter.gif</property>
+<property  name="toolTipText">Filter</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compTypeSearch" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="4Reset" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/refresh.gif</property>
+<property  name="toolTipText">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4SearchItemCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4SearchCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4SearchKey" name="text"></property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="4Panel" class="JPanel">
+<style>
+<property  name="bounds">25,84,506,180</property>
+<property  name="layout">null</property>
+</style>
+<part id="14itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,486,160</property>
+<property  name="preferredSize">486,160</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 11</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,10,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,10,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 12</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,10,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,40,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 13</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,40,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,40,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 14</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,40,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,70,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 15</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,70,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,70,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 16</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,70,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,100,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 17</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,100,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,100,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 18</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,100,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,130,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 19</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,130,150,20</property>
+</style>
+</part>
+<part id="14InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,130,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 20</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="14InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,130,150,20</property>
+</style>
+</part>
+</part>
+</part>
+<part id="4NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">58,279,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="4FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="4PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="4Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="4NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="4LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="4ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">58,314,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="4NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="4DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="4ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="4OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="4Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="5compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type New Window Subcomponents</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">20,20,480,325</property>
+</style>
+<part id="5compTypeMenu" class="JMenuBar">
+<part id="5compTypeMenu" class="JMenu">
+<style>
+<property  name="text">Subcomponents</property>
+<property  name="mnemonic">83</property>
+</style>
+<part id="51compTypeMenu" class="JMenuItem">
+<style>
+<property  name="text">Component Type 2</property>
+<property  name="mnemonic">67</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="5Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,420,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type 1</property>
+</style>
+</part>
+<part id="5Toolbar" class="JPanel">
+<style>
+<property  name="opaque">false</property>
+<property  name="bounds">20,29,122,0</property>
+</style>
+<part id="56ToolbarButton" class="JButton">
+<style>
+<property  name="text">Component Type 2</property>
+<property  name="preferredSize">120,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="5Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,420,140</property>
+<property  name="layout">null</property>
+</style>
+<part id="15itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,400,70</property>
+<property  name="preferredSize">400,70</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 1</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="15InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 1</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="15InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">71,10,150,20</property>
+</style>
+</part>
+<part id="25InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,40,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 2</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="25InputField" class="JTextField">
+<style>
+<property  name="text">default value</property>
+<property  name="bounds">71,40,100,20</property>
+</style>
+</part>
+</part>
+<part id="25itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,90,400,40</property>
+<property  name="preferredSize">400,40</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 2</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="35InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 3</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="35InputField" class="JTextField">
+<style>
+<property  name="text">0</property>
+<property  name="bounds">71,10,30,20</property>
+</style>
+</part>
+</part>
+</part>
+<part id="5NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">15,184,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="5FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="5PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="5Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="5NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="5LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="5ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">15,219,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="5NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="5compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="5DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="5ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="5OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="5Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="5compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="6compType" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Master-Detail</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="closable">true</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+<property  name="iconifiable">true</property>
+<property  name="bounds">20,20,480,472</property>
+</style>
+<part id="6Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,420,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type 1</property>
+</style>
+</part>
+<part id="6Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,420,60</property>
+<property  name="layout">null</property>
+</style>
+<part id="06itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,400,40</property>
+<property  name="preferredSize">400,40</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="26InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 2</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="26InputField" class="JTextField">
+<style>
+<property  name="text">default value</property>
+<property  name="bounds">71,10,100,20</property>
+</style>
+</part>
+</part>
+</part>
+<part id="6SubCompTypePanel" class="JPanel">
+<style>
+<property  name="bounds">10,89,440,383</property>
+<property  name="layout">null</property>
+<property  name="opaque">false</property>
+</style>
+<part id="7Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,400,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Child Component Type 2</property>
+</style>
+</part>
+<part id="7Search" class="JPanel">
+<style>
+<property  name="bounds">25,29,400,45</property>
+<property  name="border">EtchedBorder</property>
+<property  name="background">ece9d8</property>
+</style>
+<part id="7SearchItemCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="content"><constant model="list">
+<constant value="Item 11"/>
+<constant value="Item 12"/>
+<constant value="Item 13"/>
+<constant value="Item 14"/>
+</constant>
+</property>
+<property  part-name="7SearchItemCombo" name="selectedIndex">0</property>
+<property  name="toolTipText">Search by item</property>
+</style>
+</part>
+<part id="7SearchCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">40,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="7SearchCombo" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="7SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="7Filter" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/filter.gif</property>
+<property  name="toolTipText">Filter</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="7compTypeSearch" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="7Reset" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/refresh.gif</property>
+<property  name="toolTipText">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="7SearchItemCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="7SearchCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="7SearchKey" name="text"></property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="7TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">25,84,400,179</property>
+</style>
+<part id="7Table" class="JTable">
+<style>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="columnNames">
+<constant model="list">
+<constant value="Item 11"/>
+<constant value="Item 12"/>
+<constant value="Item 13"/>
+<constant value="Item 14"/>
+</constant>
+</property>
+<property  name="content">
+<constant model="table.rowMajor">
+<constant>
+<constant value="Item 11 Value 11"/>
+<constant value="Item 12 Value 21"/>
+<constant value="Item 13 Value 31"/>
+<constant value="Item 14 Value 41"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 12"/>
+<constant value="Item 12 Value 22"/>
+<constant value="Item 13 Value 32"/>
+<constant value="Item 14 Value 42"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 13"/>
+<constant value="Item 12 Value 23"/>
+<constant value="Item 13 Value 33"/>
+<constant value="Item 14 Value 43"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 14"/>
+<constant value="Item 12 Value 24"/>
+<constant value="Item 13 Value 34"/>
+<constant value="Item 14 Value 44"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 15"/>
+<constant value="Item 12 Value 25"/>
+<constant value="Item 13 Value 35"/>
+<constant value="Item 14 Value 45"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 16"/>
+<constant value="Item 12 Value 26"/>
+<constant value="Item 13 Value 36"/>
+<constant value="Item 14 Value 46"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 17"/>
+<constant value="Item 12 Value 27"/>
+<constant value="Item 13 Value 37"/>
+<constant value="Item 14 Value 47"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 18"/>
+<constant value="Item 12 Value 28"/>
+<constant value="Item 13 Value 38"/>
+<constant value="Item 14 Value 48"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 19"/>
+<constant value="Item 12 Value 29"/>
+<constant value="Item 13 Value 39"/>
+<constant value="Item 14 Value 49"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 110"/>
+<constant value="Item 12 Value 210"/>
+<constant value="Item 13 Value 310"/>
+<constant value="Item 14 Value 410"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 111"/>
+<constant value="Item 12 Value 211"/>
+<constant value="Item 13 Value 311"/>
+<constant value="Item 14 Value 411"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 112"/>
+<constant value="Item 12 Value 212"/>
+<constant value="Item 13 Value 312"/>
+<constant value="Item 14 Value 412"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 113"/>
+<constant value="Item 12 Value 213"/>
+<constant value="Item 13 Value 313"/>
+<constant value="Item 14 Value 413"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 114"/>
+<constant value="Item 12 Value 214"/>
+<constant value="Item 13 Value 314"/>
+<constant value="Item 14 Value 414"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 115"/>
+<constant value="Item 12 Value 215"/>
+<constant value="Item 13 Value 315"/>
+<constant value="Item 14 Value 415"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 116"/>
+<constant value="Item 12 Value 216"/>
+<constant value="Item 13 Value 316"/>
+<constant value="Item 14 Value 416"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 117"/>
+<constant value="Item 12 Value 217"/>
+<constant value="Item 13 Value 317"/>
+<constant value="Item 14 Value 417"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 118"/>
+<constant value="Item 12 Value 218"/>
+<constant value="Item 13 Value 318"/>
+<constant value="Item 14 Value 418"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 119"/>
+<constant value="Item 12 Value 219"/>
+<constant value="Item 13 Value 319"/>
+<constant value="Item 14 Value 419"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 120"/>
+<constant value="Item 12 Value 220"/>
+<constant value="Item 13 Value 320"/>
+<constant value="Item 14 Value 420"/>
+</constant>
+</constant>
+</property>
+</style>
+</part>
+</part>
+<part id="6NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">5,268,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="6FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="6PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="6Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="6NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="6LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="6ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">5,303,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="6NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="6compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="6DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="6ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="6OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="6Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="6compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+</part>
+<part id="MenuForm" class="JInternalFrame">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">IIS*UIModeler Template clasic</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="layout">null</property>
+<property  name="bounds">20,20,600,250</property>
+<property  name="closable">false</property>
+<property  name="iconifiable">false</property>
+<property  name="frameIcon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/src/ui/icons/IIST.gif</property>
+</style>
+<part id="menuPanel1" class="JPanel">
+<style>
+<property  name="bounds">0,30,600,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="0menuButton" class="JButton">
+<style>
+<property  name="text">Form Type Table</property>
+<property part-class="JButton"  name="preferredSize">250,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="1menuButton" class="JButton">
+<style>
+<property  name="text">Form Type Nested Item Groups</property>
+<property part-class="JButton"  name="preferredSize">250,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="2compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="menuPanel2" class="JPanel">
+<style>
+<property  name="bounds">0,85,600,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="2menuButton" class="JButton">
+<style>
+<property  name="text">Form Type 3 Item Groups</property>
+<property part-class="JButton"  name="preferredSize">250,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="3compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="3menuButton" class="JButton">
+<style>
+<property  name="text">Form Type Input Fields</property>
+<property part-class="JButton"  name="preferredSize">250,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="menuPanel3" class="JPanel">
+<style>
+<property  name="bounds">0,140,600,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="4menuButton" class="JButton">
+<style>
+<property  name="text">Form Type New Window Subcomponents</property>
+<property part-class="JButton"  name="preferredSize">250,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="5compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="5menuButton" class="JButton">
+<style>
+<property  name="text">Form Type Master-Detail</property>
+<property part-class="JButton"  name="preferredSize">250,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="6compType" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+</part>
+<part id="51compType" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type New Window Subcomponents</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">25,70,460,383</property>
+</style>
+<part id="51Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,400,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type 2</property>
+</style>
+</part>
+<part id="51Search" class="JPanel">
+<style>
+<property  name="bounds">25,29,400,45</property>
+<property  name="border">EtchedBorder</property>
+<property  name="background">ece9d8</property>
+</style>
+<part id="51SearchItemCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="content"><constant model="list">
+<constant value="Item 8"/>
+<constant value="Item 9 long"/>
+</constant>
+</property>
+<property  part-name="51SearchItemCombo" name="selectedIndex">0</property>
+<property  name="toolTipText">Search by item</property>
+</style>
+</part>
+<part id="51SearchCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">40,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="51SearchCombo" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="51SearchKey" class="JTextField">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="51Filter" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/filter.gif</property>
+<property  name="toolTipText">Filter</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51compTypeSearch" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="51Reset" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/refresh.gif</property>
+<property  name="toolTipText">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51SearchItemCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51SearchCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51SearchKey" name="text"></property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="51TableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">25,84,400,179</property>
+</style>
+<part id="51Table" class="JTable">
+<style>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="columnNames">
+<constant model="list">
+<constant value="Item 8"/>
+<constant value="Item 9 long"/>
+</constant>
+</property>
+<property  name="content">
+<constant model="table.rowMajor">
+<constant>
+<constant value="Item 8 Value 11"/>
+<constant value="Item 9 long Value 21"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 12"/>
+<constant value="Item 9 long Value 22"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 13"/>
+<constant value="Item 9 long Value 23"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 14"/>
+<constant value="Item 9 long Value 24"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 15"/>
+<constant value="Item 9 long Value 25"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 16"/>
+<constant value="Item 9 long Value 26"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 17"/>
+<constant value="Item 9 long Value 27"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 18"/>
+<constant value="Item 9 long Value 28"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 19"/>
+<constant value="Item 9 long Value 29"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 110"/>
+<constant value="Item 9 long Value 210"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 111"/>
+<constant value="Item 9 long Value 211"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 112"/>
+<constant value="Item 9 long Value 212"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 113"/>
+<constant value="Item 9 long Value 213"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 114"/>
+<constant value="Item 9 long Value 214"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 115"/>
+<constant value="Item 9 long Value 215"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 116"/>
+<constant value="Item 9 long Value 216"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 117"/>
+<constant value="Item 9 long Value 217"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 118"/>
+<constant value="Item 9 long Value 218"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 119"/>
+<constant value="Item 9 long Value 219"/>
+</constant>
+<constant>
+<constant value="Item 8 Value 120"/>
+<constant value="Item 9 long Value 220"/>
+</constant>
+</constant>
+</property>
+</style>
+</part>
+</part>
+<part id="5NavigationPanel" class="JPanel">
+<style>
+<property  name="bounds">5,268,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="5FirstButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prevv.gif</property>
+<property  name="toolTipText">First record</property>
+</style>
+</part>
+<part id="5PrevButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/prev.gif</property>
+<property  name="toolTipText">Previos record record</property>
+</style>
+</part>
+<part id="5Records" class="JLabel">
+<style>
+<property  name="horizontalAlignment">CENTER</property>
+<property  name="preferredSize">75,30</property>
+<property  name="text">Record: 1/100</property>
+</style>
+</part>
+<part id="5NextButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/next.gif</property>
+<property  name="toolTipText">Next record</property>
+</style>
+</part>
+<part id="5LastButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/nextt.gif</property>
+<property  name="toolTipText">Last record</property>
+</style>
+</part>
+</part>
+<part id="5ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">5,303,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="5NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="5compTypeInput" name="visible">true</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="5DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="5ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="5OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="5Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="5compType" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="1compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Table Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">25,70,480,299</property>
+</style>
+<part id="1Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,430,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type Input Form</property>
+</style>
+</part>
+<part id="1Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,420,180</property>
+<property  name="layout">null</property>
+</style>
+<part id="11itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,400,70</property>
+<property  name="preferredSize">400,70</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 1</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="11InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 1</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="11InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">71,10,150,20</property>
+</style>
+</part>
+<part id="21InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,40,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 2</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="21InputField" class="JTextField">
+<style>
+<property  name="text">default value</property>
+<property  name="bounds">71,40,100,20</property>
+</style>
+</part>
+</part>
+<part id="21itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,90,400,80</property>
+<property  name="preferredSize">400,80</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group 2</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="41InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,42,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 4</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="41InputFieldScrollPane" class="JScrollPane">
+<style>
+<property  name="border">EtchedBorder</property>
+</style>
+<part id="41InputField" class="JTextArea">
+<style>
+<property  name="text">Item 4 Value</property>
+<property  name="text">Item 4 Value</property>
+</style>
+</part>
+<style>
+<property  name="bounds">71,10,150,60</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="1ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">15,224,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="1NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+</part>
+<part id="1DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="1ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="1OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="1Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="1compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="51compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type New Window Subcomponents Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">25,70,480,229</property>
+</style>
+<part id="51Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,430,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type 2 Input Form</property>
+</style>
+</part>
+<part id="51Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,420,110</property>
+<property  name="layout">null</property>
+</style>
+<part id="151itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,400,90</property>
+<property  name="preferredSize">400,90</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="851InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 8</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="851InputField" class="JCheckBox">
+<style>
+<property  name="opaque">false</property>
+<property  name="bounds">106,5,20,20</property>
+</style>
+</part>
+<part id="951InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,40,77,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 9 long</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="951InputFieldPane" class="ButtonGroup">
+<part id="951InputField" class="JRadioButton">
+<style>
+<property  name="text">yes</property>
+<property  name="bounds">106,35,40,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+<part id="951InputField" class="JRadioButton">
+<style>
+<property  name="text">no</property>
+<property  name="bounds">106,55,40,20</property>
+<property  name="opaque">false</property>
+</style>
+</part>
+</part>
+</part>
+</part>
+
+<part id="51ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">15,154,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="51NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+</part>
+<part id="51DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="51ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="51OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="51Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="51compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="7compTypeInput" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Master-Detail Input Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">25,70,566,209</property>
+</style>
+<part id="7Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,516,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Child Component Type 2 Input Form</property>
+</style>
+</part>
+<part id="7Panel" class="JPanel">
+<style>
+<property  name="bounds">25,29,506,90</property>
+<property  name="layout">null</property>
+</style>
+<part id="07itemGroup" class="JPanel">
+<style>
+<property  name="bounds">10,10,486,70</property>
+<property  name="preferredSize">486,70</property>
+<property  name="border">EtchedBorder</property>
+<property  name="name">Item Group</property>
+<property  name="background">ece9d8</property>
+<property  name="layout">null</property>
+</style>
+<part id="17InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,10,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 11</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="17InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,10,150,20</property>
+</style>
+</part>
+<part id="17InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,10,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 12</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="17InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,10,150,20</property>
+</style>
+</part>
+<part id="17InputLabel" class="JLabel">
+<style>
+<property  name="bounds">10,40,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 13</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="17InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">78,40,150,20</property>
+</style>
+</part>
+<part id="17InputLabel" class="JLabel">
+<style>
+<property  name="bounds">238,40,49,11</property>
+<property  name="horizontalAlignment">LEFT</property>
+<property  name="text">Item 14</property>
+<property  name="font">Arial Bold-bold-11</property>
+</style>
+</part>
+
+<part id="17InputField" class="JTextField">
+<style>
+<property  name="text"></property>
+<property  name="bounds">306,40,150,20</property>
+</style>
+</part>
+</part>
+</part>
+
+<part id="7ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">58,134,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="7NewButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/new.gif</property>
+<property  name="toolTipText">New</property>
+</style>
+</part>
+<part id="7DeleteButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/erase.gif</property>
+<property  name="toolTipText">Delete</property>
+</style>
+</part>
+<part id="7ApplyButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/apply.gif</property>
+<property  name="toolTipText">Apply</property>
+</style>
+</part>
+<part id="7OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+</part>
+<part id="7Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="7compTypeInput" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="4compTypeSearch" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">Form Type Input Fields Search Form</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="bounds">25,70,510,343</property>
+</style>
+<part id="4Title" class="JLabel">
+<style>
+<property  name="horizontalAlignment">RIGHT</property>
+<property  name="verticalAlignment">BOTTOM</property>
+<property  name="bounds">20,0,460,19</property>
+<property  name="font">SansSerif.bold-bold-14</property>
+<property  name="text">Component Type Search Form</property>
+</style>
+</part>
+<part id="4Search" class="JPanel">
+<style>
+<property  name="bounds">25,29,450,45</property>
+<property  name="border">EtchedBorder</property>
+<property  name="background">ece9d8</property>
+</style>
+<part id="4SearchDialogItemCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="content"><constant model="list">
+<constant value="Item 11"/>
+<constant value="Item 12"/>
+<constant value="Item 13"/>
+<constant value="Item 14"/>
+<constant value="Item 15"/>
+<constant value="Item 16"/>
+<constant value="Item 17"/>
+<constant value="Item 18"/>
+<constant value="Item 19"/>
+<constant value="Item 20"/>
+</constant>
+</property>
+<property  part-name="4SearchDialogItemCombo" name="selectedIndex">0</property>
+<property  name="toolTipText">Search by item</property>
+</style>
+</part>
+<part id="4SearchDialogCombo" class="JComboBox">
+<style>
+<property  name="preferredSize">40,21</property>
+<property  name="content"><constant model="list">
+<constant value=""/>
+<constant value="like"/>
+<constant value="&gt;"/>
+<constant value="&gt;="/>
+<constant value="="/>
+<constant value="=&lt;"/>
+<constant value="&lt;"/>
+</constant>
+</property>
+<property  part-name="4SearchDialogCombo" name="selectedIndex">0</property>
+</style>
+</part>
+<part id="4SearchDialogKey" class="JTextField">
+<style>
+<property  name="preferredSize">80,21</property>
+<property  name="toolTipText">Search key</property>
+</style>
+</part>
+<part id="4Filter" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/filter.gif</property>
+<property  name="toolTipText">Filter</property>
+</style>
+</part>
+<part id="4Reset" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/refresh.gif</property>
+<property  name="toolTipText">Reset</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4SearchDialogItemCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4SearchDialogCombo" name="selectedIndex">0</property>
+</action>
+</rule>
+</behavior>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4SearchDialogKey" name="text"></property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+<part id="4SearchTableScroll" class="JScrollPane">
+<style>
+<property  name="bounds">25,84,450,179</property>
+</style>
+<part id="4SearchTable" class="JTable">
+<style>
+<property  name="selectionMode">0</property>
+<property  name="autoResizeMode">0</property>
+<property  name="columnNames">
+<constant model="list">
+<constant value="Item 11"/>
+<constant value="Item 12"/>
+<constant value="Item 13"/>
+<constant value="Item 14"/>
+<constant value="Item 15"/>
+<constant value="Item 16"/>
+<constant value="Item 17"/>
+<constant value="Item 18"/>
+<constant value="Item 19"/>
+<constant value="Item 20"/>
+</constant>
+</property>
+<property  name="content">
+<constant model="table.rowMajor">
+<constant>
+<constant value="Item 11 Value 11"/>
+<constant value="Item 12 Value 21"/>
+<constant value="Item 13 Value 31"/>
+<constant value="Item 14 Value 41"/>
+<constant value="Item 15 Value 51"/>
+<constant value="Item 16 Value 61"/>
+<constant value="Item 17 Value 71"/>
+<constant value="Item 18 Value 81"/>
+<constant value="Item 19 Value 91"/>
+<constant value="Item 20 Value 101"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 12"/>
+<constant value="Item 12 Value 22"/>
+<constant value="Item 13 Value 32"/>
+<constant value="Item 14 Value 42"/>
+<constant value="Item 15 Value 52"/>
+<constant value="Item 16 Value 62"/>
+<constant value="Item 17 Value 72"/>
+<constant value="Item 18 Value 82"/>
+<constant value="Item 19 Value 92"/>
+<constant value="Item 20 Value 102"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 13"/>
+<constant value="Item 12 Value 23"/>
+<constant value="Item 13 Value 33"/>
+<constant value="Item 14 Value 43"/>
+<constant value="Item 15 Value 53"/>
+<constant value="Item 16 Value 63"/>
+<constant value="Item 17 Value 73"/>
+<constant value="Item 18 Value 83"/>
+<constant value="Item 19 Value 93"/>
+<constant value="Item 20 Value 103"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 14"/>
+<constant value="Item 12 Value 24"/>
+<constant value="Item 13 Value 34"/>
+<constant value="Item 14 Value 44"/>
+<constant value="Item 15 Value 54"/>
+<constant value="Item 16 Value 64"/>
+<constant value="Item 17 Value 74"/>
+<constant value="Item 18 Value 84"/>
+<constant value="Item 19 Value 94"/>
+<constant value="Item 20 Value 104"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 15"/>
+<constant value="Item 12 Value 25"/>
+<constant value="Item 13 Value 35"/>
+<constant value="Item 14 Value 45"/>
+<constant value="Item 15 Value 55"/>
+<constant value="Item 16 Value 65"/>
+<constant value="Item 17 Value 75"/>
+<constant value="Item 18 Value 85"/>
+<constant value="Item 19 Value 95"/>
+<constant value="Item 20 Value 105"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 16"/>
+<constant value="Item 12 Value 26"/>
+<constant value="Item 13 Value 36"/>
+<constant value="Item 14 Value 46"/>
+<constant value="Item 15 Value 56"/>
+<constant value="Item 16 Value 66"/>
+<constant value="Item 17 Value 76"/>
+<constant value="Item 18 Value 86"/>
+<constant value="Item 19 Value 96"/>
+<constant value="Item 20 Value 106"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 17"/>
+<constant value="Item 12 Value 27"/>
+<constant value="Item 13 Value 37"/>
+<constant value="Item 14 Value 47"/>
+<constant value="Item 15 Value 57"/>
+<constant value="Item 16 Value 67"/>
+<constant value="Item 17 Value 77"/>
+<constant value="Item 18 Value 87"/>
+<constant value="Item 19 Value 97"/>
+<constant value="Item 20 Value 107"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 18"/>
+<constant value="Item 12 Value 28"/>
+<constant value="Item 13 Value 38"/>
+<constant value="Item 14 Value 48"/>
+<constant value="Item 15 Value 58"/>
+<constant value="Item 16 Value 68"/>
+<constant value="Item 17 Value 78"/>
+<constant value="Item 18 Value 88"/>
+<constant value="Item 19 Value 98"/>
+<constant value="Item 20 Value 108"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 19"/>
+<constant value="Item 12 Value 29"/>
+<constant value="Item 13 Value 39"/>
+<constant value="Item 14 Value 49"/>
+<constant value="Item 15 Value 59"/>
+<constant value="Item 16 Value 69"/>
+<constant value="Item 17 Value 79"/>
+<constant value="Item 18 Value 89"/>
+<constant value="Item 19 Value 99"/>
+<constant value="Item 20 Value 109"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 110"/>
+<constant value="Item 12 Value 210"/>
+<constant value="Item 13 Value 310"/>
+<constant value="Item 14 Value 410"/>
+<constant value="Item 15 Value 510"/>
+<constant value="Item 16 Value 610"/>
+<constant value="Item 17 Value 710"/>
+<constant value="Item 18 Value 810"/>
+<constant value="Item 19 Value 910"/>
+<constant value="Item 20 Value 1010"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 111"/>
+<constant value="Item 12 Value 211"/>
+<constant value="Item 13 Value 311"/>
+<constant value="Item 14 Value 411"/>
+<constant value="Item 15 Value 511"/>
+<constant value="Item 16 Value 611"/>
+<constant value="Item 17 Value 711"/>
+<constant value="Item 18 Value 811"/>
+<constant value="Item 19 Value 911"/>
+<constant value="Item 20 Value 1011"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 112"/>
+<constant value="Item 12 Value 212"/>
+<constant value="Item 13 Value 312"/>
+<constant value="Item 14 Value 412"/>
+<constant value="Item 15 Value 512"/>
+<constant value="Item 16 Value 612"/>
+<constant value="Item 17 Value 712"/>
+<constant value="Item 18 Value 812"/>
+<constant value="Item 19 Value 912"/>
+<constant value="Item 20 Value 1012"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 113"/>
+<constant value="Item 12 Value 213"/>
+<constant value="Item 13 Value 313"/>
+<constant value="Item 14 Value 413"/>
+<constant value="Item 15 Value 513"/>
+<constant value="Item 16 Value 613"/>
+<constant value="Item 17 Value 713"/>
+<constant value="Item 18 Value 813"/>
+<constant value="Item 19 Value 913"/>
+<constant value="Item 20 Value 1013"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 114"/>
+<constant value="Item 12 Value 214"/>
+<constant value="Item 13 Value 314"/>
+<constant value="Item 14 Value 414"/>
+<constant value="Item 15 Value 514"/>
+<constant value="Item 16 Value 614"/>
+<constant value="Item 17 Value 714"/>
+<constant value="Item 18 Value 814"/>
+<constant value="Item 19 Value 914"/>
+<constant value="Item 20 Value 1014"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 115"/>
+<constant value="Item 12 Value 215"/>
+<constant value="Item 13 Value 315"/>
+<constant value="Item 14 Value 415"/>
+<constant value="Item 15 Value 515"/>
+<constant value="Item 16 Value 615"/>
+<constant value="Item 17 Value 715"/>
+<constant value="Item 18 Value 815"/>
+<constant value="Item 19 Value 915"/>
+<constant value="Item 20 Value 1015"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 116"/>
+<constant value="Item 12 Value 216"/>
+<constant value="Item 13 Value 316"/>
+<constant value="Item 14 Value 416"/>
+<constant value="Item 15 Value 516"/>
+<constant value="Item 16 Value 616"/>
+<constant value="Item 17 Value 716"/>
+<constant value="Item 18 Value 816"/>
+<constant value="Item 19 Value 916"/>
+<constant value="Item 20 Value 1016"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 117"/>
+<constant value="Item 12 Value 217"/>
+<constant value="Item 13 Value 317"/>
+<constant value="Item 14 Value 417"/>
+<constant value="Item 15 Value 517"/>
+<constant value="Item 16 Value 617"/>
+<constant value="Item 17 Value 717"/>
+<constant value="Item 18 Value 817"/>
+<constant value="Item 19 Value 917"/>
+<constant value="Item 20 Value 1017"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 118"/>
+<constant value="Item 12 Value 218"/>
+<constant value="Item 13 Value 318"/>
+<constant value="Item 14 Value 418"/>
+<constant value="Item 15 Value 518"/>
+<constant value="Item 16 Value 618"/>
+<constant value="Item 17 Value 718"/>
+<constant value="Item 18 Value 818"/>
+<constant value="Item 19 Value 918"/>
+<constant value="Item 20 Value 1018"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 119"/>
+<constant value="Item 12 Value 219"/>
+<constant value="Item 13 Value 319"/>
+<constant value="Item 14 Value 419"/>
+<constant value="Item 15 Value 519"/>
+<constant value="Item 16 Value 619"/>
+<constant value="Item 17 Value 719"/>
+<constant value="Item 18 Value 819"/>
+<constant value="Item 19 Value 919"/>
+<constant value="Item 20 Value 1019"/>
+</constant>
+<constant>
+<constant value="Item 11 Value 120"/>
+<constant value="Item 12 Value 220"/>
+<constant value="Item 13 Value 320"/>
+<constant value="Item 14 Value 420"/>
+<constant value="Item 15 Value 520"/>
+<constant value="Item 16 Value 620"/>
+<constant value="Item 17 Value 720"/>
+<constant value="Item 18 Value 820"/>
+<constant value="Item 19 Value 920"/>
+<constant value="Item 20 Value 1020"/>
+</constant>
+</constant>
+</property>
+</style>
+</part>
+</part>
+
+<part id="4ButtonPanel" class="JPanel">
+<style>
+<property  name="bounds">30,268,440,35</property>
+<property  name="opaque">false</property>
+</style>
+<part id="4OKButton" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/ok.gif</property>
+<property  name="toolTipText">OK</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compTypeSearch" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+<part id="4Cancel" class="JButton">
+<style>
+<property  name="preferredSize">30,30</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/close.gif</property>
+<property  name="toolTipText">Cancel</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="4compTypeSearch" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+<part id="About" class="JDialog">
+<style>
+<property  name="defaultCloseOperation">1</property>
+<property  name="title">About</property>
+<property  name="visible">false</property>
+<property  name="resizable">false</property>
+<property  name="modal">true</property>
+<property  name="layout">null</property>
+<property  name="bounds">20,20,325,192</property>
+</style>
+<part id="labelIcon" class="JLabel">
+<style>
+<property  name="bounds">146,20,32,32</property>
+<property  name="icon">C:\Program Files\jdevstudio10131\jdev\mywork\IISCASE\IISUIModeler/icons/iist-big.gif</property>
+</style>
+</part>
+<part id="labelAbout" class="JLabel">
+<style>
+<property  name="bounds">0,60,325,16</property>
+<property  name="text">The application is generated by</property>
+<property  name="horizontalAlignment">CENTER</property>
+</style>
+</part>
+<part id="labelAbout" class="JLabel">
+<style>
+<property  name="bounds">0,81,325,16</property>
+<property  name="text">IIS*UIModeler Design Template Tool Version 6.3.1</property>
+<property  name="horizontalAlignment">CENTER</property>
+</style>
+</part>
+<part id="buttonAbout" class="JButton">
+<style>
+<property  name="text">Close</property>
+<property  name="bounds">127,112,70,30</property>
+</style>
+<behavior>
+<rule>
+<condition>
+<event class="actionPerformed"/>
+</condition>
+<action>
+<property  part-name="About" name="visible">false</property>
+</action>
+</rule>
+</behavior>
+</part>
+</part>
+</part>
+</structure>
+<style>
+<property part-class="JFrame"  name="defaultCloseOperation">2</property>
+<property part-class="JFrame"  name="font">Arial Bold-bold-11</property>
+<property part-class="JDialog"  name="layout">null</property>
+<property part-class="JDialog"  name="font">Arial Bold-bold-11</property>
+<property part-class="JDialog"  name="background">ece9d8</property>
+<property part-class="JDialog"  name="foreground">000000</property>
+<property part-class="JInternalFrame"  name="layout">null</property>
+<property part-class="JInternalFrame"  name="font">Arial Bold-bold-11</property>
+<property part-class="JInternalFrame"  name="background">ece9d8</property>
+<property part-class="JInternalFrame"  name="foreground">000000</property>
+<property part-class="JMenu"  name="background">ece9d8</property>
+<property part-class="JMenu"  name="foreground">000000</property>
+<property part-class="JMenu"  name="font">Arial Bold-bold-11</property>
+<property part-class="JMenuBar"  name="background">ece9d8</property>
+<property part-class="JMenuBar"  name="foreground">000000</property>
+<property part-class="JMenuItem"  name="background">ece9d8</property>
+<property part-class="JMenuItem"  name="foreground">000000</property>
+<property part-class="JMenuItem"  name="font">Arial Bold-bold-11</property>
+<property part-class="JTabbedPane"  name="background">ece9d8</property>
+<property part-class="JTabbedPane"  name="foreground">000000</property>
+<property part-class="JTabbedPane"  name="font">Arial Bold-bold-11</property>
+<property part-class="JPanel"  name="background">ece9d8</property>
+<property part-class="JPanel"  name="foreground">000000</property>
+<property part-class="JPanel"  name="font">Arial Bold-bold-11</property>
+<property part-class="JButton"  name="background">ece9d8</property>
+<property part-class="JButton"  name="foreground">000000</property>
+<property part-class="JButton"  name="font">Arial Bold-bold-11</property>
+<property part-class="JButton"  name="contentAreaFilled">false</property>
+<property part-class="JButton"  name="opaque">true</property>
+<property part-class="JButton"  name="border">BevelBorder,raised</property>
+<property part-class="JButton"  name="preferredSize">75,30</property>
+<property part-class="JLabel"  name="opaque">false</property>
+<property part-class="JLabel"  name="font">Arial Bold-bold-11</property>
+<property part-class="JTextField"  name="border">EtchedBorder</property>
+<property part-class="JTextField"  name="font">Arial-11</property>
+<property part-class="JTextField"  name="background">ffffff</property>
+<property part-class="JTextField"  name="foreground">000000</property>
+<property part-class="JTextArea"  name="border">EtchedBorder</property>
+<property part-class="JTextArea"  name="font">Arial-11</property>
+<property part-class="JTextArea"  name="background">ffffff</property>
+<property part-class="JTextArea"  name="foreground">000000</property>
+<property part-class="JRadioButton"  name="border">LineBorder,000000,1</property>
+<property part-class="JRadioButton"  name="font">Arial-11</property>
+<property part-class="JCheckBox"  name="border">EmptyBorder,0,0,0,0</property>
+<property part-class="JCheckBox"  name="font">Arial-11</property>
+<property part-class="JComboBox"  name="border">LineBorder,000000,1</property>
+<property part-class="JComboBox"  name="font">Arial-11</property>
+<property part-class="JComboBox"  name="background">ffffff</property>
+<property part-class="JComboBox"  name="foreground">000000</property>
+<property part-class="JList"  name="border">LineBorder,000000,1</property>
+<property part-class="JList"  name="font">Arial-11</property>
+<property part-class="JList"  name="background">ffffff</property>
+<property part-class="JList"  name="foreground">000000</property>
+<property part-class="JTable"  name="background">ffffff</property>
+<property part-class="JTable"  name="foreground">000000</property>
+<property part-class="JTable"  name="selectionBackground">a246a</property>
+<property part-class="JTable"  name="selectionForeground">ffffff</property>
+<property part-class="JTable"  name="font">Arial-11</property>
+<property part-class="JTable"  name="intercellSpacing">0,0</property>
+<property part-class="JTable"  name="rowHeight">15</property>
+<property part-class="JTable"  name="border">EtchedBorder</property>
+</style>
+</interface>
+<peers>
+<logic>
+<d-component id="MainFrame" name="MainFrame" maps-to="ui.UIFrame">
+<d-method id="Close" maps-to="closeFrame">
+</d-method>
+</d-component>
+</logic>
+<presentation base="Java_1.5_Harmonia_1.0" how="union" export="optional">
+</presentation></peers>
+</uiml>
